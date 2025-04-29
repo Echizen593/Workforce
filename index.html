@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Workforce Career Institute - Enhanced Homepage</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <style>
@@ -18,19 +18,35 @@
       padding: 0.5rem 1rem;
       border-radius: 0.5rem;
     }
+    .nav-link {
+      position: relative;
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      width: 0;
+      height: 2px;
+      background-color: white;
+      transition: width 0.3s ease-in-out;
+    }
+    .nav-link:hover::after {
+      width: 100%;
+    }
   </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
   <!-- Navigation -->
-  <header class="bg-blue-800 text-white p-4 shadow sticky top-0 z-50">
-    <div class="container mx-auto flex justify-between items-center">
-      <h1 class="text-xl font-bold">Workforce Career Institute</h1>
-      <nav class="space-x-4 text-sm">
-        <a href="#home" class="hover:underline">Home</a>
-        <a href="#about" class="hover:underline">About</a>
-        <a href="#programs" class="hover:underline">Programs</a>
-        <a href="#students" class="hover:underline">Students</a>
-        <a href="#contact" class="hover:underline">Contact</a>
+  <header class="bg-blue-800 text-white shadow sticky top-0 z-50">
+    <div class="container mx-auto flex justify-between items-center px-4 py-4">
+      <h1 class="text-2xl font-bold">Workforce Career Institute</h1>
+      <nav class="flex space-x-6 text-sm font-medium">
+        <a href="#home" class="nav-link hover:text-gray-200">Home</a>
+        <a href="#about" class="nav-link hover:text-gray-200">About</a>
+        <a href="#programs" class="nav-link hover:text-gray-200">Programs</a>
+        <a href="#students" class="nav-link hover:text-gray-200">Students</a>
+        <a href="#contact" class="nav-link hover:text-gray-200">Contact</a>
       </nav>
     </div>
   </header>
@@ -41,7 +57,7 @@
       <h2 class="text-4xl font-extrabold mb-4 text-blue-800">Empowering Your Future Through Career-Focused Education</h2>
       <p class="mb-8 text-lg text-gray-700">Explore industry-aligned programs, flexible learning options, and expert guidance to help you succeed in today’s workforce.</p>
       <div class="relative w-full max-w-4xl mx-auto mb-6">
-        <img id="carouselImage" class="w-full rounded-lg shadow-lg fade opacity-100" src="https://via.placeholder.com/800x400?text=Welcome+to+WCI" alt="Slideshow Image">
+        <img id="carouselImage" class="w-full rounded-lg shadow-lg fade opacity-100" src="https://echizen593.github.io/Workforce/IMG1.jpg" alt="Slideshow Image">
         <div id="carouselCaption" class="carousel-caption text-sm">Welcome to Workforce Career Institute</div>
       </div>
       <a href="#programs" class="mt-4 inline-block bg-blue-600 text-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-blue-700">Explore Programs</a>
@@ -65,7 +81,7 @@
         caption: 'Advance your skills with our career programs'
       },
       {
-       src:'https://echizen593.github.io/Workforce/IMG3.jpg',
+        src:'https://echizen593.github.io/Workforce/IMG3.jpg',
         caption: 'Student success is our mission'
       },
       {
