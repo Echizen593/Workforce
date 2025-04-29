@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Workforce Career Institute - Enhanced Homepage</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    .fade {
+      transition: opacity 1s ease-in-out;
+    }
+    .carousel-caption {
+      position: absolute;
+      bottom: 1.5rem;
+      left: 1.5rem;
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+  <!-- Navigation -->
+  <header class="bg-blue-800 text-white p-4 shadow sticky top-0 z-50">
+    <div class="container mx-auto flex justify-between items-center">
+      <h1 class="text-xl font-bold">Workforce Career Institute</h1>
+      <nav class="space-x-4 text-sm">
+        <a href="#home" class="hover:underline">Home</a>
+        <a href="#about" class="hover:underline">About</a>
+        <a href="#programs" class="hover:underline">Programs</a>
+        <a href="#students" class="hover:underline">Students</a>
+        <a href="#contact" class="hover:underline">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Homepage with Enhanced Image Carousel -->
+  <section id="home" class="py-16 bg-white">
+    <div class="container mx-auto text-center px-4">
+      <h2 class="text-4xl font-extrabold mb-4 text-blue-800">Empowering Your Future Through Career-Focused Education</h2>
+      <p class="mb-8 text-lg text-gray-700">Explore industry-aligned programs, flexible learning options, and expert guidance to help you succeed in today’s workforce.</p>
+      <div class="relative w-full max-w-4xl mx-auto mb-6">
+        <img id="carouselImage" class="w-full rounded-lg shadow-lg fade opacity-100" src="https://via.placeholder.com/800x400?text=Welcome+to+WCI" alt="Slideshow Image">
+        <div id="carouselCaption" class="carousel-caption text-sm">Welcome to Workforce Career Institute</div>
+      </div>
+      <a href="#programs" class="mt-4 inline-block bg-blue-600 text-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-blue-700">Explore Programs</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-blue-800 text-white text-center p-4 mt-12">
+    <p>&copy; 2025 Workforce Career Institute. All rights reserved.</p>
+  </footer>
+
+  <!-- JavaScript for Image Carousel with Captions -->
+  <script>
+    const images = [
+      {
+        src: 'https://echizen593.github.io/Workforce/Workforce1/img1.jpg',
+        caption: 'Welcome to Workforce Career Institute'
+      },
+      {
+        src: 'https://via.placeholder.com/800x400?text=Career+Programs',
+        caption: 'Advance your skills with our career programs'
+      },
+      {
+        src: 'https://via.placeholder.com/800x400?text=Student+Success',
+        caption: 'Student success is our mission'
+      },
+      {
+        src: 'https://via.placeholder.com/800x400?text=Join+Us+Today',
+        caption: 'Join us today and start your journey'
+      }
+    ];
+    let index = 0;
+    const imageElement = document.getElementById('carouselImage');
+    const captionElement = document.getElementById('carouselCaption');
+
+    setInterval(() => {
+      imageElement.classList.remove('opacity-100');
+      imageElement.classList.add('opacity-0');
+      setTimeout(() => {
+        index = (index + 1) % images.length;
+        imageElement.src = images[index].src;
+        captionElement.textContent = images[index].caption;
+        imageElement.classList.remove('opacity-0');
+        imageElement.classList.add('opacity-100');
+      }, 500);
+    }, 4000);
+  </script>
+</body>
+</html>
