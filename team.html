@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Workforce Career Institute - Enhanced Homepage</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    .legal-image {
+      border: 4px solid #e5e7eb; /* Tailwind's gray-200 */
+      border-radius: 12px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- Enhanced Responsive Header -->
+  <header class="bg-gradient-to-r from-blue-900 via-blue-800 to-blue-700 text-white shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto flex items-center justify-between py-4 px-6">
+      <div class="flex items-center space-x-4">
+        <img src="https://echizen593.github.io/Workforce/LOGO2.png" alt="Logo" class="h-14 w-auto object-contain">
+        <div>
+          <h1 class="leading-tight">
+            <span class="block text-2xl font-bold tracking-tight">WORKFORCE</span>
+            <span class="block text-sm font-light tracking-wide">CAREER INSTITUTE</span>
+          </h1>
+        </div>
+      </div>
+      <button id="menu-toggle" class="lg:hidden focus:outline-none">
+        <svg class="w-8 h-8" fill="none" stroke="white" viewBox="0 0 24 24" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+      <nav id="nav-menu" class="hidden lg:flex flex-col lg:flex-row lg:items-center lg:space-x-6 text-md font-medium tracking-wide absolute lg:static top-full left-0 w-full lg:w-auto bg-blue-800 lg:bg-transparent z-40 lg:z-auto">
+        <a href="index.html" class="px-4 py-2 hover:text-yellow-300 transition">HOME</a>
+        <div class="relative group px-4 py-2">
+          <button class="hover:text-yellow-300 transition">ABOUT US</button>
+          <div class="hidden group-hover:block absolute bg-white text-black rounded-lg shadow-lg mt-2 w-60">
+            <a href="profile.html" class="block px-4 py-2 hover:bg-gray-100">Profile</a>
+            <a href="vision.html" class="block px-4 py-2 hover:bg-gray-100">Vision, Mission & Values</a>
+            <a href="legalities.html" class="block px-4 py-2 hover:bg-gray-100">Legalities</a>
+            <a href="board.html" class="block px-4 py-2 hover:bg-gray-100">Board of Directors</a>
+            <a href="team.html" class="block px-4 py-2 hover:bg-gray-100">Working Team</a>
+            <a href="teaching.html" class="block px-4 py-2 hover:bg-gray-100">Teaching Force</a>
+            <a href="community.html" class="block px-4 py-2 hover:bg-gray-100">Community Extension</a>
+          </div>
+        </div>
+        <a href="academic.html" class="px-4 py-2 hover:text-yellow-300 transition">ACADEMIC</a>
+        <div class="relative group px-4 py-2">
+          <button class="hover:text-yellow-300 transition">STUDENTS</button>
+          <div class="hidden group-hover:block absolute bg-white text-black rounded-lg shadow-lg mt-2 w-60">
+            <a href="admission.html" class="block px-4 py-2 hover:bg-gray-100">Admission</a>
+            <a href="student.html" class="block px-4 py-2 hover:bg-gray-100">Student Support</a>
+            <a href="accounts.html" class="block px-4 py-2 hover:bg-gray-100">Accounts</a>
+            <a href="research.html" class="block px-4 py-2 hover:bg-gray-100">Student Research</a>
+            <a href="career.html" class="block px-4 py-2 hover:bg-gray-100">Career Center</a>
+            <a href="classroom.html" class="block px-4 py-2 hover:bg-gray-100">The Classroom</a>
+          </div>
+        </div>
+        <a href="contact.html" class="px-4 py-2 hover:text-yellow-300 transition">CONTACT</a>
+        <div class="flex flex-col lg:hidden items-start space-y-2 px-4 py-4 border-t border-white">
+          <a href="#apply" class="bg-yellow-400 hover:bg-yellow-500 text-blue-900 font-semibold px-5 py-2 rounded-full text-sm shadow">APPLY NOW</a>
+          <a href="#help" class="border border-white text-white hover:bg-white hover:text-blue-800 font-semibold px-5 py-2 rounded-full text-sm shadow">GET HELP</a>
+        </div>
+      </nav>
+      <div class="hidden lg:flex space-x-3">
+        <a href="#apply" class="bg-yellow-400 hover:bg-yellow-500 text-blue-900 font-semibold px-5 py-2 rounded-full text-sm shadow">APPLY NOW</a>
+        <a href="#help" class="border border-white text-white hover:bg-white hover:text-blue-800 font-semibold px-5 py-2 rounded-full text-sm shadow">GET HELP</a>
+      </div>
+    </div>
+    <script>
+      const toggleBtn = document.getElementById('menu-toggle');
+      const navMenu = document.getElementById('nav-menu');
+      toggleBtn.addEventListener('click', () => {
+        navMenu.classList.toggle('hidden');
+      });
+    </script>
+  </header>
+
+  <!-- BOARD OF DIRECTORS Section -->
+  <section class="px-4 py-10 bg-gray-100">
+    <div class="max-w-6xl mx-auto text-center">
+      <h2 class="text-4xl font-extrabold mb-10 text-blue-800">BOARD OF DIRECTORS</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div>
+          <img src="board1.png" alt="Board" class="legal-image h-[360px]">
+          <h3 class="text-xl font-semibold mt-4">Allen Cahati-an Condez, RN</h3>
+          <p class="text-gray-600">Board</p>
+        </div>
+        <div>
+          <img src="board2.jpg" alt="Board" class="legal-image h-[360px]">
+          <h3 class="text-xl font-semibold mt-4">Myrna N. Cahati-an</h3>
+          <p class="text-gray-600">President</p>
+        </div>
+        <div>
+          <img src="board3.jpg" alt="Board" class="legal-image h-[360px]">
+          <h3 class="text-xl font-semibold mt-4">Mary Ann Cahati-an Bordo, RN</h3>
+          <p class="text-gray-600">Treasurer</p>
+        </div>
+        <div>
+          <img src="board4.png" alt="Board" class="legal-image h-[360px]">
+          <h3 class="text-xl font-semibold mt-4">Matilde Faith C. Lalisan</h3>
+          <p class="text-gray-600">Board Secretary</p>
+        </div>
+        <div>
+          <img src="board5.png" alt="Board" class="legal-image h-[360px]">
+          <h3 class="text-xl font-semibold mt-4">Peter Elmar C. Bordo, EdD, CCS</h3>
+          <p class="text-gray-600">Director</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-blue-800 text-white text-center p-4 mt-12">
+    <p>&copy; 2025 Workforce Career Institute. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
