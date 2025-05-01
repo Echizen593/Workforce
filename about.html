@@ -97,68 +97,13 @@
   </div>
 </section>
 
-<script>
-  const container = document.getElementById('scrollContainer');
-  const content = document.getElementById('scrollContent');
 
-  let scrollAmount = 0;
-
-  function autoScrollRight() {
-    scrollAmount += 1;
-    container.scrollLeft = scrollAmount;
-
-    if (scrollAmount >= content.scrollWidth / 2) {
-      scrollAmount = 0;
-    }
-
-    requestAnimationFrame(autoScrollRight);
-  }
-
-  autoScrollRight();
-</script>
 
   <!-- Footer -->
   <footer class="bg-blue-800 text-white text-center p-4 mt-12">
     <p>&copy; 2025 Workforce Career Institute. All rights reserved.</p>
   </footer>
 
-  <!-- JavaScript for Image Carousel with Captions -->
-  <script>
-    const images = [
-      {
-        src:'https://echizen593.github.io/Workforce/IMG1.jpg',
-        caption: 'Welcome to Workforce Career Institute'
-      },
-      {
-        src:'https://echizen593.github.io/Workforce/IMG2.jpg',
-        caption: 'Advance your skills with our career programs'
-      },
-      {
-        src:'https://echizen593.github.io/Workforce/IMG3.jpg',
-        caption: 'Student success is our mission'
-      },
-      {
-        src:'https://echizen593.github.io/Workforce/IMG5.jpg',
-        caption: 'Join us today and start your journey'
-      }
-    ];
-    let index = 0;
-    const imageElement = document.getElementById('carouselImage');
-    const captionElement = document.getElementById('carouselCaption');
 
-    setInterval(() => {
-      imageElement.classList.remove('opacity-100');
-      imageElement.classList.add('opacity-0');
-      setTimeout(() => {
-        index = (index + 1) % images.length;
-        imageElement.src = images[index].src;
-        captionElement.textContent = images[index].caption;
-        imageElement.classList.remove('opacity-0');
-        imageElement.classList.add('opacity-100');
-      }, 500);
-    }, 4000);
-  </script>
-
- 
 </body>
 </html>
