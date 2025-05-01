@@ -56,13 +56,14 @@
       background-color: #f1f1f1;
     }
 
-    /* Custom style for board images */
+    /* Uniform size and style for board images */
     .legal-image {
-      border: 4px solid #1E40AF; /* Tailwind blue-800 */
+      border: 4px solid #1E40AF;
       border-radius: 12px;
       box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
-      max-width: 100%;
-      height: auto;
+      width: 240px;
+      height: 300px;
+      object-fit: cover;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
     .legal-image:hover {
@@ -76,7 +77,6 @@
   <!-- Navigation -->
   <header class="bg-blue-800 text-white shadow sticky top-0 z-50">
     <div class="container mx-auto flex items-center justify-between py-4 px-1">
-      <!-- Logo -->
       <div class="flex items-center space-x-3">
         <img src="https://echizen593.github.io/Workforce/LOGO2.png" alt="Logo" class="h-16 w-auto object-contain">
         <h1 class="leading-tight">
@@ -85,10 +85,8 @@
         </h1>
       </div>
 
-      <!-- Navigation Links -->
       <nav class="hidden lg:flex text-lg font-semibold tracking-wide divide-x divide-white relative">
         <a href="index.html" class="px-4 hover:text-blue-200">HOME</a>
-
         <div class="relative dropdown">
           <a href="#" class="px-4 hover:text-blue-200 nav-link">ABOUT US</a>
           <div class="dropdown-menu">
@@ -101,9 +99,7 @@
             <a href="community.html">Community Extension Program</a>
           </div>
         </div>
-
         <a href="academic.html" class="px-4 hover:text-blue-200">ACADEMIC</a>
-
         <div class="relative dropdown">
           <a href="#" class="px-4 hover:text-blue-200 nav-link">STUDENTS</a>
           <div class="dropdown-menu">
@@ -115,11 +111,9 @@
             <a href="classroom.html">The Classroom</a>
           </div>
         </div>
-
         <a href="contact.html" class="px-4 hover:text-blue-200">CONTACT</a>
       </nav>
 
-      <!-- Action Buttons -->
       <div class="space-x-3">
         <a href="#apply" class="bg-yellow-400 hover:bg-yellow-500 text-blue-900 font-semibold px-5 py-2 rounded-full text-sm shadow-sm">APPLY NOW</a>
         <a href="#help" class="border border-white text-white hover:bg-white hover:text-blue-800 font-semibold px-5 py-2 rounded-full text-sm shadow-sm">GET HELP</a>
@@ -134,45 +128,6 @@
 
       <!-- Chair -->
       <div class="mb-12">
-        <img src="board1.png" alt="Allen Cahati-an Condez" class="legal-image mx-auto mb-4 w-60">
+        <img src="board1.png" alt="Allen Cahati-an Condez" class="legal-image mx-auto mb-4">
         <h3 class="text-xl font-semibold">Allen Cahati-an Condez, RN</h3>
         <p class="text-lg text-gray-600">Chair</p>
-      </div>
-
-      <!-- President and Treasurer -->
-      <div class="grid md:grid-cols-2 gap-10 justify-items-center mb-10">
-        <div>
-          <img src="board2.jpg" alt="Myrna N. Cahati-an" class="legal-image mb-4 w-60 mx-auto">
-          <h3 class="text-xl font-semibold">Myrna N. Cahati-an</h3>
-          <p class="text-lg text-gray-600">President</p>
-        </div>
-        <div>
-          <img src="board3.jpg" alt="Mary Ann Cahati-an Bordo" class="legal-image mb-4 w-60 mx-auto">
-          <h3 class="text-xl font-semibold">Mary Ann Cahati-an Bordo, RN</h3>
-          <p class="text-lg text-gray-600">Treasurer</p>
-        </div>
-      </div>
-
-      <!-- Secretary and Director -->
-      <div class="grid md:grid-cols-2 gap-10 justify-items-center">
-        <div>
-          <img src="board4.png" alt="Matilde Faith C. Lalisan" class="legal-image mb-4 w-60 mx-auto">
-          <h3 class="text-xl font-semibold">Matilde Faith C. Lalisan</h3>
-          <p class="text-lg text-gray-600">Board Secretary</p>
-        </div>
-        <div>
-          <img src="board5.png" alt="Peter Elmar C. Bordo" class="legal-image mb-4 w-60 mx-auto">
-          <h3 class="text-xl font-semibold">Peter Elmar C. Bordo, EdD, CCS</h3>
-          <p class="text-lg text-gray-600">Director</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="bg-blue-800 text-white text-center p-4 mt-12">
-    <p>&copy; 2025 Workforce Career Institute. All rights reserved.</p>
-  </footer>
-
-</body>
-</html>
