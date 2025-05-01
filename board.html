@@ -9,6 +9,7 @@
     .fade {
       transition: opacity 1s ease-in-out;
     }
+
     .carousel-caption {
       position: absolute;
       bottom: 1.5rem;
@@ -18,9 +19,11 @@
       padding: 0.5rem 1rem;
       border-radius: 0.5rem;
     }
+
     .nav-link {
       position: relative;
     }
+
     .nav-link::after {
       content: '';
       position: absolute;
@@ -31,12 +34,15 @@
       background-color: white;
       transition: width 0.3s ease-in-out;
     }
+
     .nav-link:hover::after {
       width: 100%;
     }
+
     .dropdown:hover .dropdown-menu {
       display: block;
     }
+
     .dropdown-menu {
       display: none;
       position: absolute;
@@ -46,28 +52,27 @@
       z-index: 1000;
       box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
     }
+
     .dropdown-menu a {
       display: block;
       padding: 10px;
       color: black;
       text-decoration: none;
     }
+
     .dropdown-menu a:hover {
       background-color: #f1f1f1;
     }
 
-    /* Custom style for board images */
+    /* Updated styling for consistent image sizing */
     .legal-image {
-      border: 4px solid #1E40AF; /* Tailwind blue-800 */
+      width: 250px;
+      height: 330px;
+      object-fit: cover;
+      border: 4px solid #1E40AF; /* Tailwind's blue-900 */
       border-radius: 12px;
       box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
-      max-width: 100%;
-      height: auto;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .legal-image:hover {
-      transform: scale(1.05);
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     }
   </style>
 </head>
@@ -75,7 +80,7 @@
 
   <!-- Navigation -->
   <header class="bg-blue-800 text-white shadow sticky top-0 z-50">
-    <div class="container mx-auto flex items-center justify-between py-4 px-1">
+    <div class="container mx-auto flex items-center justify-between py-4 px-4">
       <!-- Logo -->
       <div class="flex items-center space-x-3">
         <img src="https://echizen593.github.io/Workforce/LOGO2.png" alt="Logo" class="h-16 w-auto object-contain">
@@ -128,44 +133,47 @@
   </header>
 
   <!-- BOARD OF DIRECTORS Section -->
-  <section class="px-4 py-10 bg-gray-100">
+  <section class="px-4 py-12 bg-gray-100">
     <div class="max-w-7xl mx-auto text-center">
-      <h2 class="text-4xl font-extrabold mb-8 text-blue-800">BOARD OF DIRECTORS</h2>
+      <h2 class="text-4xl font-extrabold mb-10 text-blue-800">BOARD OF DIRECTORS</h2>
 
-      <!-- Chair -->
-      <div class="mb-12">
-        <img src="board1.png" alt="Allen Cahati-an Condez" class="legal-image mx-auto mb-4 w-60">
-        <h3 class="text-xl font-semibold">Allen Cahati-an Condez, RN</h3>
-        <p class="text-lg text-gray-600">Chair</p>
-      </div>
-
-      <!-- President and Treasurer -->
-      <div class="grid md:grid-cols-2 gap-10 justify-items-center mb-10">
+      <!-- Row 1 -->
+      <div class="grid md:grid-cols-2 gap-8 justify-center items-start mb-10">
         <div>
-          <img src="board2.jpg" alt="Myrna N. Cahati-an" class="legal-image mb-4 w-60 mx-auto">
+          <img src="board1.png" alt="Allen Cahati-an Condez" class="legal-image mx-auto mb-4">
+          <h3 class="text-xl font-semibold">Allen Cahati-an Condez, RN</h3>
+          <h4 class="text-lg text-gray-700">Board</h4>
+        </div>
+        <div>
+          <img src="board2.jpg" alt="Myrna N. Cahati-an" class="legal-image mx-auto mb-4">
           <h3 class="text-xl font-semibold">Myrna N. Cahati-an</h3>
-          <p class="text-lg text-gray-600">President</p>
-        </div>
-        <div>
-          <img src="board3.jpg" alt="Mary Ann Cahati-an Bordo" class="legal-image mb-4 w-60 mx-auto">
-          <h3 class="text-xl font-semibold">Mary Ann Cahati-an Bordo, RN</h3>
-          <p class="text-lg text-gray-600">Treasurer</p>
+          <h4 class="text-lg text-gray-700">President</h4>
         </div>
       </div>
 
-      <!-- Secretary and Director -->
-      <div class="grid md:grid-cols-2 gap-10 justify-items-center">
+      <!-- Row 2 -->
+      <div class="grid md:grid-cols-2 gap-8 justify-center items-start mb-10">
         <div>
-          <img src="board4.png" alt="Matilde Faith C. Lalisan" class="legal-image mb-4 w-60 mx-auto">
-          <h3 class="text-xl font-semibold">Matilde Faith C. Lalisan</h3>
-          <p class="text-lg text-gray-600">Board Secretary</p>
+          <img src="board3.jpg" alt="Mary Ann Cahati-an Bordo" class="legal-image mx-auto mb-4">
+          <h3 class="text-xl font-semibold">Mary Ann Cahati-an Bordo, RN</h3>
+          <h4 class="text-lg text-gray-700">Treasurer</h4>
         </div>
         <div>
-          <img src="board5.png" alt="Peter Elmar C. Bordo" class="legal-image mb-4 w-60 mx-auto">
-          <h3 class="text-xl font-semibold">Peter Elmar C. Bordo, EdD, CCS</h3>
-          <p class="text-lg text-gray-600">Director</p>
+          <img src="board4.png" alt="Matilde Faith C. Lalisan" class="legal-image mx-auto mb-4">
+          <h3 class="text-xl font-semibold">Matilde Faith C. Lalisan</h3>
+          <h4 class="text-lg text-gray-700">Board Secretary</h4>
         </div>
       </div>
+
+      <!-- Row 3 -->
+      <div class="flex justify-center">
+        <div>
+          <img src="board5.png" alt="Peter Elmar C. Bordo" class="legal-image mx-auto mb-4">
+          <h3 class="text-xl font-semibold">Peter Elmar C. Bordo, EdD, CCS</h3>
+          <h4 class="text-lg text-gray-700">Director</h4>
+        </div>
+      </div>
+
     </div>
   </section>
 
