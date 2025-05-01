@@ -1,1 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Workforce Career Institute - Enhanced Homepage</title>
+  <style>
+    .fade {
+      transition: opacity 1s ease-in-out;
+    }
+    .carousel-caption {
+      position: absolute;
+      bottom: 1.5rem;
+      left: 1.5rem;
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
+    }
+    .nav-link {
+      position: relative;
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      width: 0;
+      height: 2px;
+      background-color: white;
+      transition: width 0.3s ease-in-out;
+    }
+    .nav-link:hover::after {
+      width: 100%;
+    }
+    /* Adjust the font size of "Workforce" */
+    h1 span.workforce {
+      font-size: 3rem; /* Larger font size */
+    }
 
+    h1 span.career-institute {
+      font-size: 2rem; /* Smaller font size for Career Institute */
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+ 
+
+    <!-- Main Navigation Bar -->
+<div class="container mx-auto flex items-center justify-between py-4 px-1">
+      <!-- Logo and Name -->
+     <div class="flex items-center space-x-3">
+  <img src="https://echizen593.github.io/Workforce/LOGO2.png" alt="Logo" class="h-16 w-auto object-contain">
+  <h1 class="leading-tight">
+    <span class="block text-2xl font-bold">WORKFORCE</span>
+    <span class="block text-lg font-semibold">CAREER INSTITUTE</span>
+  </h1>
+</div>
+
+      <!-- Navigation Links -->
+    <nav class="hidden lg:flex text-lg font-semibold tracking-wide divide-x divide-white/40">
+  <a href="index.html" class="px-4 hover:text-blue-200">HOME</a>
+  <a href="about.html" class="px-4 hover:text-blue-200">ABOUT US</a>
+  <a href="academic.html" class="px-4 hover:text-blue-200">ACADEMIC</a>
+  <a href="students.html" class="px-4 hover:text-blue-200">STUDENTS</a>
+  <a href="contact.html" class="px-4 hover:text-blue-200">CONTACT</a>
+</nav>
+
+      <!-- Action Buttons -->
+      <div class="space-x-3">
+        <a href="#apply" class="bg-yellow-400 hover:bg-yellow-500 text-blue-900 font-semibold px-5 py-2 rounded-full text-sm shadow-sm">APPLY NOW</a>
+        <a href="#help" class="border border-white text-white hover:bg-white hover:text-blue-800 font-semibold px-5 py-2 rounded-full text-sm shadow-sm">GET HELP</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Homepage with Enhanced Image Carousel -->
+  <section id="home" class="py-16 bg-white">
+    <div class="container mx-auto text-center px-4">
+      <h2 class="text-4xl font-extrabold mb-4 text-blue-800">Empowering Your Future Through Career-Focused Education</h2>
+      <p class="mb-8 text-lg text-gray-700">Explore industry-aligned programs, flexible learning options, and expert guidance to help you succeed in today’s workforce.</p>
+      <div class="relative w-full max-w-6xl h-[500px] mx-auto mb-6">
+  <img id="carouselImage" class="w-full h-full object-cover rounded-lg shadow-lg fade opacity-100" src="https://echizen593.github.io/Workforce/IMG1.jpg" alt="Slideshow Image">
+        <div id="carouselCaption" class="carousel-caption text-sm">Welcome to Workforce Career Institute</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- News & Features Section -->
+<section class="py-16 bg-gray-100">
+  <div class="container mx-auto px-4">
+    <h2 class="text-3xl font-bold text-center text-blue-800 mb-12">News & Features</h2>
+    <div class="grid md:grid-cols-3 gap-8">
+      <!-- Card 1 -->
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+        <img src="https://echizen593.github.io/Workforce/news2.jpg" alt="News 1" class="w-full h-56 object-cover">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-blue-800 mb-2">1st Founding Anniversary OPEN HOUSE of #workforcecareerinstitute</h3>
+          <p class="text-gray-700 text-sm mb-3">March 27, 2025</p>
+          <p class="text-gray-600 text-sm">You are invited to attend the 1st Founding Anniversary OPEN HOUSE of #workforcecareerinstitute on Tuesday, May 6, 2025 from 8AM to 5PM.
+There will be EXCLUSIVE SCHOLARSHIPS available to those who will attend and register in the said event both in-person and online. Apart from that, take advantage of the following services:
+- Information Session
+- FREE Career Advising
+- Chance to Speak with Students
+Pre-register now by calling (036) 500-0526 or 0917-155-3325 or email us at admissions@workforce-institute.com.</p>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+        <img src="https://echizen593.github.io/Workforce/news3.jpg" alt="News 2" class="w-full h-56 object-cover">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-blue-800 mb-2">TESDA Scholarship</h3>
+          <p class="text-gray-700 text-sm mb-3">April 1, 2025</p>
+          <p class="text-gray-600 text-sm">BE A TESDA SCHOLAR NOW! #workforcecareerinstitute is now accepting for applicants for BOOKKEEPING NCIII qualification scholarship.  Entry Requirements:
+•Must be at least High School graduate or equivalent
+•Must be at least 18 years old
+•Must be able to communicate effectively both orally and in written form
+•Must be physically, emotionally, psychologically, and mentally fit
+•Must be able to perform basic mathematical computations
+Class starts on April 14th.</p>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+        <img src="https://echizen593.github.io/Workforce/news1.jpg" alt="News 3" class="w-full h-56 object-cover">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-blue-800 mb-2">Graduation Meeting</h3>
+          <p class="text-gray-700 text-sm mb-3">March 1, 2025</p>
+          <p class="text-gray-600 text-sm">Workforce Career institute scheduled its Graduation meeting on March 5, 2025 , 1 p.m. via Google meet</p>
+        </div>
+      </div>
+    </div>
+        
+
+      <!-- Navigation Buttons -->
+      <div class="flex justify-center mt-8 space-x-4">
+        <button class="bg-blue-700 hover:bg-blue-800 text-white px-6 py-2 rounded-lg shadow">Previous</button>
+        <button class="bg-blue-700 hover:bg-blue-800 text-white px-6 py-2 rounded-lg shadow">Next</button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+  </div>
+</section>
+
+ <section class="py-16 bg-white">
+  <div class="container mx-auto px-4">
+    <h2 class="text-3xl font-bold text-center text-cyan-600 mb-10">Program Categories</h2>
+    <div id="scrollContainer" class="overflow-hidden whitespace-nowrap relative">
+      <div id="scrollContent" class="inline-flex space-x-6 min-w-max px-2">
+        <!-- Repeat cards to enable seamless scroll -->
+        <div class="flex space-x-6">
+          <!-- Program Card -->
+          <div class="w-48 bg-blue-400 text-white rounded-lg p-6 text-center shadow-md">
+            <div class="text-4xl mb-3">💻</div>
+            <h3 class="font-semibold text-md">Business & Accountancy</h3>
+          </div>
+          <div class="w-48 bg-blue-900 text-white rounded-lg p-6 text-center shadow-md">
+            <div class="text-4xl mb-3">❤️</div>
+            <h3 class="font-semibold text-md">Healthcare</h3>
+          </div>
+          <div class="w-48 bg-pink-500 text-white rounded-lg p-6 text-center shadow-md">
+            <div class="text-4xl mb-3">📘</div>
+            <h3 class="font-semibold text-md">Education & Liberal Arts</h3>
+          </div>
+          <div class="w-48 bg-blue-600 text-white rounded-lg p-6 text-center shadow-md">
+            <div class="text-4xl mb-3">🤝</div>
+            <h3 class="font-semibold text-md">Social Work</h3>
+          </div>
+          <div class="w-48 bg-green-500 text-white rounded-lg p-6 text-center shadow-md">
+            <div class="text-4xl mb-3">🔒</div>
+            <h3 class="font-semibold text-md">Criminology</h3>
+          </div>
+          <div class="w-48 bg-cyan-500 text-white rounded-lg p-6 text-center shadow-md">
+            <div class="text-4xl mb-3">🎧</div>
+            <h3 class="font-semibold text-md">Engineering</h3>
+          </div>
+        </div>
+
+        <!-- Duplicate for loop -->
+        <div class="flex space-x-6">
+          <!-- Repeat the same cards -->
+          <div class="w-48 bg-blue-400 text-white rounded-lg p-6 text-center shadow-md">
+            <div class="text-4xl mb-3">💻</div>
+            <h3 class="font-semibold text-md">Business & Accountancy</h3>
+          </div>
+          <div class="w-48 bg-blue-900 text-white rounded-lg p-6 text-center shadow-md">
+            <div class="text-4xl mb-3">❤️</div>
+            <h3 class="font-semibold text-md">Healthcare</h3>
+          </div>
+          <div class="w-48 bg-pink-500 text-white rounded-lg p-6 text-center shadow-md">
+            <div class="text-4xl mb-3">📘</div>
+            <h3 class="font-semibold text-md">Education & Liberal Arts</h3>
+          </div>
+          <div class="w-48 bg-blue-600 text-white rounded-lg p-6 text-center shadow-md">
+            <div class="text-4xl mb-3">🤝</div>
+            <h3 class="font-semibold text-md">Social Work</h3>
+          </div>
+          <div class="w-48 bg-green-500 text-white rounded-lg p-6 text-center shadow-md">
+            <div class="text-4xl mb-3">🔒</div>
+            <h3 class="font-semibold text-md">Criminology</h3>
+          </div>
+          <div class="w-48 bg-cyan-500 text-white rounded-lg p-6 text-center shadow-md">
+        <div class="text-4xl mb-3 text-violet-600">🎧</div>
+        <h3 class="font-semibold text-md text-violet-700">Engineering</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  const container = document.getElementById('scrollContainer');
+  const content = document.getElementById('scrollContent');
+
+  let scrollAmount = 0;
+
+  function autoScrollRight() {
+    scrollAmount += 1;
+    container.scrollLeft = scrollAmount;
+
+    if (scrollAmount >= content.scrollWidth / 2) {
+      scrollAmount = 0;
+    }
+
+    requestAnimationFrame(autoScrollRight);
+  }
+
+  autoScrollRight();
+</script>
+
+  <!-- Footer -->
+  <footer class="bg-blue-800 text-white text-center p-4 mt-12">
+    <p>&copy; 2025 Workforce Career Institute. All rights reserved.</p>
+  </footer>
+
+  <!-- JavaScript for Image Carousel with Captions -->
+  <script>
+    const images = [
+      {
+        src:'https://echizen593.github.io/Workforce/IMG1.jpg',
+        caption: 'Welcome to Workforce Career Institute'
+      },
+      {
+        src:'https://echizen593.github.io/Workforce/IMG2.jpg',
+        caption: 'Advance your skills with our career programs'
+      },
+      {
+        src:'https://echizen593.github.io/Workforce/IMG3.jpg',
+        caption: 'Student success is our mission'
+      },
+      {
+        src:'https://echizen593.github.io/Workforce/IMG5.jpg',
+        caption: 'Join us today and start your journey'
+      }
+    ];
+    let index = 0;
+    const imageElement = document.getElementById('carouselImage');
+    const captionElement = document.getElementById('carouselCaption');
+
+    setInterval(() => {
+      imageElement.classList.remove('opacity-100');
+      imageElement.classList.add('opacity-0');
+      setTimeout(() => {
+        index = (index + 1) % images.length;
+        imageElement.src = images[index].src;
+        captionElement.textContent = images[index].caption;
+        imageElement.classList.remove('opacity-0');
+        imageElement.classList.add('opacity-100');
+      }, 500);
+    }, 4000);
+  </script>
+
+ 
+</body>
+</html>
