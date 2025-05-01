@@ -6,110 +6,170 @@
   <title>Workforce Career Institute - Enhanced Homepage</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <style>
-    .legal-image {
-      border: 4px solid #e5e7eb; /* Tailwind's gray-200 */
-      border-radius: 12px;
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    .fade {
+      transition: opacity 1s ease-in-out;
+    }
+    .carousel-caption {
+      position: absolute;
+      bottom: 1.5rem;
+      left: 1.5rem;
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
+    }
+    .nav-link {
+      position: relative;
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      width: 0;
+      height: 2px;
+      background-color: white;
+      transition: width 0.3s ease-in-out;
+    }
+    .nav-link:hover::after {
       width: 100%;
-      height: auto;
+    }
+    .dropdown:hover .dropdown-menu {
+      display: block;
+    }
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      background-color: white;
+      color: black;
+      min-width: 200px;
+      z-index: 1000;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    }
+    .dropdown-menu a {
+      display: block;
+      padding: 10px;
+      color: black;
+      text-decoration: none;
+    }
+    .dropdown-menu a:hover {
+      background-color: #f1f1f1;
+    }
+
+    /* Uniform size and style for board images */
+    .legal-image {
+      border: 4px solid #1E40AF;
+      border-radius: 12px;
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+      width: 240px;
+      height: 300px;
       object-fit: cover;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .legal-image:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     }
   </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
 
-  <!-- Enhanced Responsive Header -->
-  <header class="bg-gradient-to-r from-blue-900 via-blue-800 to-blue-700 text-white shadow-md sticky top-0 z-50">
-    <div class="max-w-7xl mx-auto flex items-center justify-between py-4 px-6">
-      <div class="flex items-center space-x-4">
-        <img src="https://echizen593.github.io/Workforce/LOGO2.png" alt="Logo" class="h-14 w-auto object-contain">
-        <div>
-          <h1 class="leading-tight">
-            <span class="block text-2xl font-bold tracking-tight">WORKFORCE</span>
-            <span class="block text-sm font-light tracking-wide">CAREER INSTITUTE</span>
-          </h1>
-        </div>
+  <!-- Navigation -->
+  <header class="bg-blue-800 text-white shadow sticky top-0 z-50">
+    <div class="container mx-auto flex items-center justify-between py-4 px-1">
+      <div class="flex items-center space-x-3">
+        <img src="https://echizen593.github.io/Workforce/LOGO2.png" alt="Logo" class="h-16 w-auto object-contain">
+        <h1 class="leading-tight">
+          <span class="block text-2xl font-bold">WORKFORCE</span>
+          <span class="block text-lg font-semibold">CAREER INSTITUTE</span>
+        </h1>
       </div>
-      <button id="menu-toggle" class="lg:hidden focus:outline-none">
-        <svg class="w-8 h-8" fill="none" stroke="white" viewBox="0 0 24 24" stroke-width="2">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
-        </svg>
-      </button>
-      <nav id="nav-menu" class="hidden lg:flex flex-col lg:flex-row lg:items-center lg:space-x-6 text-md font-medium tracking-wide absolute lg:static top-full left-0 w-full lg:w-auto bg-blue-800 lg:bg-transparent z-40 lg:z-auto">
-        <a href="index.html" class="px-4 py-2 hover:text-yellow-300 transition">HOME</a>
-        <div class="relative group px-4 py-2">
-          <button class="hover:text-yellow-300 transition">ABOUT US</button>
-          <div class="hidden group-hover:block absolute bg-white text-black rounded-lg shadow-lg mt-2 w-60">
-            <a href="profile.html" class="block px-4 py-2 hover:bg-gray-100">Profile</a>
-            <a href="vision.html" class="block px-4 py-2 hover:bg-gray-100">Vision, Mission & Values</a>
-            <a href="legalities.html" class="block px-4 py-2 hover:bg-gray-100">Legalities</a>
-            <a href="board.html" class="block px-4 py-2 hover:bg-gray-100">Board of Directors</a>
-            <a href="team.html" class="block px-4 py-2 hover:bg-gray-100">Working Team</a>
-            <a href="teaching.html" class="block px-4 py-2 hover:bg-gray-100">Teaching Force</a>
-            <a href="community.html" class="block px-4 py-2 hover:bg-gray-100">Community Extension</a>
+
+      <nav class="hidden lg:flex text-lg font-semibold tracking-wide divide-x divide-white relative">
+        <a href="index.html" class="px-4 hover:text-blue-200">HOME</a>
+        <div class="relative dropdown">
+          <a href="#" class="px-4 hover:text-blue-200 nav-link">ABOUT US</a>
+          <div class="dropdown-menu">
+            <a href="profile.html">Profile</a>
+            <a href="vision.html">Vision, Mission and Core Values</a>
+            <a href="legalities.html">Legalities</a>
+            <a href="board.html">Board of Directors</a>
+            <a href="team.html">The Working Team</a>
+            <a href="teaching.html">The Teaching Force</a>
+            <a href="community.html">Community Extension Program</a>
           </div>
         </div>
-        <a href="academic.html" class="px-4 py-2 hover:text-yellow-300 transition">ACADEMIC</a>
-        <div class="relative group px-4 py-2">
-          <button class="hover:text-yellow-300 transition">STUDENTS</button>
-          <div class="hidden group-hover:block absolute bg-white text-black rounded-lg shadow-lg mt-2 w-60">
-            <a href="admission.html" class="block px-4 py-2 hover:bg-gray-100">Admission</a>
-            <a href="student.html" class="block px-4 py-2 hover:bg-gray-100">Student Support</a>
-            <a href="accounts.html" class="block px-4 py-2 hover:bg-gray-100">Accounts</a>
-            <a href="research.html" class="block px-4 py-2 hover:bg-gray-100">Student Research</a>
-            <a href="career.html" class="block px-4 py-2 hover:bg-gray-100">Career Center</a>
-            <a href="classroom.html" class="block px-4 py-2 hover:bg-gray-100">The Classroom</a>
+        <a href="academic.html" class="px-4 hover:text-blue-200">ACADEMIC</a>
+        <div class="relative dropdown">
+          <a href="#" class="px-4 hover:text-blue-200 nav-link">STUDENTS</a>
+          <div class="dropdown-menu">
+            <a href="admission.html">Admission and Registration</a>
+            <a href="student.html">Student Support</a>
+            <a href="accounts.html">Accounts</a>
+            <a href="research.html">Student Research</a>
+            <a href="career.html">Career Center</a>
+            <a href="classroom.html">The Classroom</a>
           </div>
         </div>
-        <a href="contact.html" class="px-4 py-2 hover:text-yellow-300 transition">CONTACT</a>
-        <div class="flex flex-col lg:hidden items-start space-y-2 px-4 py-4 border-t border-white">
-          <a href="#apply" class="bg-yellow-400 hover:bg-yellow-500 text-blue-900 font-semibold px-5 py-2 rounded-full text-sm shadow">APPLY NOW</a>
-          <a href="#help" class="border border-white text-white hover:bg-white hover:text-blue-800 font-semibold px-5 py-2 rounded-full text-sm shadow">GET HELP</a>
-        </div>
+        <a href="contact.html" class="px-4 hover:text-blue-200">CONTACT</a>
       </nav>
-      <div class="hidden lg:flex space-x-3">
-        <a href="#apply" class="bg-yellow-400 hover:bg-yellow-500 text-blue-900 font-semibold px-5 py-2 rounded-full text-sm shadow">APPLY NOW</a>
-        <a href="#help" class="border border-white text-white hover:bg-white hover:text-blue-800 font-semibold px-5 py-2 rounded-full text-sm shadow">GET HELP</a>
+
+      <div class="space-x-3">
+        <a href="#apply" class="bg-yellow-400 hover:bg-yellow-500 text-blue-900 font-semibold px-5 py-2 rounded-full text-sm shadow-sm">APPLY NOW</a>
+        <a href="#help" class="border border-white text-white hover:bg-white hover:text-blue-800 font-semibold px-5 py-2 rounded-full text-sm shadow-sm">GET HELP</a>
       </div>
     </div>
-    <script>
-      const toggleBtn = document.getElementById('menu-toggle');
-      const navMenu = document.getElementById('nav-menu');
-      toggleBtn.addEventListener('click', () => {
-        navMenu.classList.toggle('hidden');
-      });
-    </script>
   </header>
 
-  <!-- BOARD OF DIRECTORS Section -->
+  <!-- THE WORKING TEAM Section -->
   <section class="px-4 py-10 bg-gray-100">
-    <div class="max-w-6xl mx-auto text-center">
-      <h2 class="text-4xl font-extrabold mb-10 text-blue-800">BOARD OF DIRECTORS</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div class="max-w-7xl mx-auto text-center">
+      <h2 class="text-4xl font-extrabold mb-8 text-blue-800">THE WORKING TEAM</h2>
+
+      <!-- Executive Director -->
+      <div class="mb-12">
+        <img src="board5.png" alt="Allen Cahati-an Condez" class="legal-image mx-auto mb-4">
+        <h3 class="text-xl font-semibold">Peter Elmar C. Bordo, EdD, CCS</h3>
+        <p class="text-lg text-gray-600">Executive Director</p>
+      </div>
+       <!-- Associate Director -->
+      <div class="mb-12">
+        <img src="board4.png" alt="Allen Cahati-an Condez" class="legal-image mx-auto mb-4">
+        <h3 class="text-xl font-semibold">Matilde Faith C. Lalisan</h3>
+        <p class="text-lg text-gray-600">Associate Director</p>
+      </div>
+
+      <!-- President and Treasurer -->
+      <div class="grid md:grid-cols-3 gap-10 justify-items-center mb-10">
         <div>
-          <img src="board1.png" alt="Board" class="legal-image h-[360px]">
-          <h3 class="text-xl font-semibold mt-4">Allen Cahati-an Condez, RN</h3>
-          <p class="text-gray-600">Board</p>
+          <img src="board4.jpg" alt="Myrna N. Cahati-an" class="legal-image mb-4 mx-auto">
+          <h3 class="text-xl font-semibold">Christine C. Condez</h3>
+          <p class="text-lg text-gray-600">Accounts</p>
         </div>
         <div>
-          <img src="board2.jpg" alt="Board" class="legal-image h-[360px]">
-          <h3 class="text-xl font-semibold mt-4">Myrna N. Cahati-an</h3>
-          <p class="text-gray-600">President</p>
+          <img src="board3.jpg" alt="Mary Ann Cahati-an Bordo" class="legal-image mb-4 mx-auto">
+          <h3 class="text-xl font-semibold">Rechelle Trinidad</h3>
+          <p class="text-lg text-gray-600">Student Services</p>
+        </div>
+
+         <div>
+          <img src="board3.jpg" alt="Mary Ann Cahati-an Bordo" class="legal-image mb-4 mx-auto">
+          <h3 class="text-xl font-semibold">Maricar D. Alcolentaba</h3>
+          <p class="text-lg text-gray-600">Admissions</p>
+        </div>
+      </div>
+
+      <!-- Secretary and Director -->
+      <div class="grid md:grid-cols-2 gap-10 justify-items-center">
+        <div>
+          <img src="board4.png" alt="Matilde Faith C. Lalisan" class="legal-image mb-4 mx-auto">
+          <h3 class="text-xl font-semibold">Matilde Faith C. Lalisan</h3>
+          <p class="text-lg text-gray-600">Board Secretary</p>
         </div>
         <div>
-          <img src="board3.jpg" alt="Board" class="legal-image h-[360px]">
-          <h3 class="text-xl font-semibold mt-4">Mary Ann Cahati-an Bordo, RN</h3>
-          <p class="text-gray-600">Treasurer</p>
-        </div>
-        <div>
-          <img src="board4.png" alt="Board" class="legal-image h-[360px]">
-          <h3 class="text-xl font-semibold mt-4">Matilde Faith C. Lalisan</h3>
-          <p class="text-gray-600">Board Secretary</p>
-        </div>
-        <div>
-          <img src="board5.png" alt="Board" class="legal-image h-[360px]">
-          <h3 class="text-xl font-semibold mt-4">Peter Elmar C. Bordo, EdD, CCS</h3>
-          <p class="text-gray-600">Director</p>
+          <img src="board5.png" alt="Peter Elmar C. Bordo" class="legal-image mb-4 mx-auto">
+          <h3 class="text-xl font-semibold">Peter Elmar C. Bordo, EdD, CCS</h3>
+          <p class="text-lg text-gray-600">Director</p>
         </div>
       </div>
     </div>
