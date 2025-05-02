@@ -122,32 +122,58 @@
     </div>
   </header>
   
-<!-- Visit Us Section -->
-<section class="py-12 bg-white">
-  <div class="container mx-auto px-4">
-    <h2 class="text-3xl font-bold text-center text-blue-800 mb-6">Visit Us</h2>
+<!-- Visit Us and Contact Section -->
+<section class="py-16 bg-blue-50">
+  <div class="max-w-6xl mx-auto px-6">
+    <h2 class="text-4xl font-extrabold text-center text-blue-800 mb-12">Visit Us</h2>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+      
+      <!-- Map Embed -->
+      <div class="rounded-2xl overflow-hidden shadow-lg border border-blue-100">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3932.4591733729654!2d122.35460421478874!3d11.712550591678695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33aecdafc3e2cf8f%3A0x8dc4c84e2f5d9c5c!2sWorkforce%20Career%20Institute!5e0!3m2!1sen!2sph!4v1714628012040!5m2!1sen!2sph"
+          width="100%" 
+          height="400" 
+          style="border:0;" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade"
+          class="w-full h-full">
+        </iframe>
+      </div>
 
-    <!-- Embedded Google Map -->
-    <div class="w-full mb-8">
-      <iframe 
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3932.4591733729654!2d122.35460421478874!3d11.712550591678695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33aecdafc3e2cf8f%3A0x8dc4c84e2f5d9c5c!2sWorkforce%20Career%20Institute!5e0!3m2!1sen!2sph!4v1714628012040!5m2!1sen!2sph" 
-        width="100%" 
-        height="350" 
-        style="border:0;" 
-        allowfullscreen="" 
-        loading="lazy" 
-        referrerpolicy="no-referrer-when-downgrade"
-        class="rounded shadow-lg">
-      </iframe>
-    </div>
+      <!-- Contact Info -->
+      <div class="bg-white rounded-2xl shadow-xl p-8 flex flex-col justify-center border border-blue-100">
+        <h3 class="text-2xl font-bold text-blue-800 mb-6">Contact Us</h3>
+        <div class="space-y-4 text-lg text-gray-700">
+          <div class="flex items-center space-x-3">
+            <svg class="w-6 h-6 text-blue-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 5h12M9 3v2m0 4v2m0 4v2m0 4v2m6-6h6" />
+            </svg>
+            <span><strong>Workforce Career Institute</strong></span>
+          </div>
+          <div class="flex items-center space-x-3">
+            <svg class="w-6 h-6 text-blue-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8m0 8H3" />
+            </svg>
+            <span>036 500 0526</span>
+          </div>
+          <div class="flex items-center space-x-3">
+            <svg class="w-6 h-6 text-blue-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 5h18M3 10h18M3 15h18M3 20h18" />
+            </svg>
+            <span>+63 917 155 3325</span>
+          </div>
+          <div class="flex items-center space-x-3">
+            <svg class="w-6 h-6 text-blue-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M16 12h2a2 2 0 012 2v6H4v-6a2 2 0 012-2h2m4-4v12" />
+            </svg>
+            <a href="mailto:info@workforce-institute.com" class="hover:underline text-blue-700">info@workforce-institute.com</a>
+          </div>
+        </div>
+      </div>
 
-    <!-- Contact Info -->
-    <div class="text-center">
-      <h3 class="text-2xl font-semibold text-blue-800 mb-4">Contact Us</h3>
-      <p class="mb-2"><strong>Workforce Career Institute</strong></p>
-      <p class="mb-2">📞 036 500 0526</p>
-      <p class="mb-2">📱 +63 917 155 3325</p>
-      <p class="mb-2">📧 <a href="mailto:info@workforce-institute.com" class="text-blue-600 hover:underline">info@workforce-institute.com</a></p>
     </div>
   </div>
 </section>
