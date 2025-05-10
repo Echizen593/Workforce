@@ -60,55 +60,41 @@
 <body class="bg-gray-50 text-gray-800">
 
   <!-- Navigation -->
-  <header class="bg-blue-800 text-white shadow sticky top-0 z-50">
-    <div class="container mx-auto flex items-center justify-between py-4 px-1">
-      <!-- Logo -->
+    <!-- Header -->
+  <header class="bg-gray-800 text-white shadow sticky top-0 z-50 border-b-4 border-yellow-400">
+    <div class="container mx-auto flex items-center justify-between py-4 px-4">
       <div class="flex items-center space-x-3">
         <img src="https://echizen593.github.io/Workforce/LOGO2.png" alt="Logo" class="h-16 w-auto object-contain">
-        <h1 class="leading-tight">
+        <div>
           <span class="block text-2xl font-bold">WORKFORCE</span>
-          <span class="block text-lg font-semibold">CAREER INSTITUTE</span>
-        </h1>
+          <span class="block text-sm font-light tracking-wide text-gray-300">CAREER INSTITUTE</span>
+        </div>
       </div>
 
-      <!-- Navigation Links -->
-<nav class="hidden lg:flex text-lg font-semibold tracking-wide divide-x divide-white relative">        
-  <a href="index.html" class="px-4 hover:text-blue-200">HOME</a>
-
-        <div class="relative dropdown">
-          <a href="" class="px-4 hover:text-blue-200 nav-link">ABOUT US</a>
-          <div class="dropdown-menu">
-            <a href="profile.html">Profile</a>
-            <a href="vision.html">Vision, Mission and Core Values</a>
-            <a href="legalities.html">Legalities</a>
-            <a href="board.html">Board of Directors</a>
-            <a href="team.html">The Working Team</a>
-            <a href="teaching.html">The Teaching Force</a>
-            <a href="community.html">Community Extension Program</a>
+      <!-- Navigation -->
+      <nav class="hidden lg:flex text-lg font-semibold tracking-wide space-x-6 divide-x divide-gray-500">
+        <a href="index.html" class="nav-link text-white hover:text-gray-300">Home</a>
+        <div class="relative group">
+          <a href="about.html" class="nav-link text-white hover:text-gray-300">About Us</a>
+          <div class="absolute left-0 top-full bg-white text-gray-800 shadow-lg rounded-md mt-1 hidden group-hover:block z-50 min-w-[250px]">
+            <a href="profile.html" class="block px-4 py-2 hover:bg-gray-100">Profile</a>
+            <a href="vmcv.html" class="block px-4 py-2 hover:bg-gray-100">Vision, Mission and Core Values</a>
+            <a href="legalities.html" class="block px-4 py-2 hover:bg-gray-100">Legalities</a>
+            <a href="board.html" class="block px-4 py-2 hover:bg-gray-100">Board of Directors</a>
+            <a href="team.html" class="block px-4 py-2 hover:bg-gray-100">The Working Team</a>
+            <a href="faculty.html" class="block px-4 py-2 hover:bg-gray-100">The Teaching Force</a>
+            <a href="extension.html" class="block px-4 py-2 hover:bg-gray-100">Community Extension Program</a>
           </div>
         </div>
-
-        <a href="academic.html" class="px-4 hover:text-blue-200">ACADEMIC</a>
-
-        <div class="relative dropdown">
-          <a href="" class="px-4 hover:text-blue-200 nav-link">STUDENTS</a>
-          <div class="dropdown-menu">
-            <a href="admission.html">Admission and Registration</a>
-            <a href="student.html">Student Support</a>
-            <a href="accounts.html">Accounts</a>
-            <a href="research.html">Student Research</a>
-            <a href="career.html">Career Center</a>
-            <a href="classroom.html">The Classroom</a>
-          </div>
-        </div>
-
-        <a href="contact.html" class="px-4 hover:text-blue-200">CONTACT</a>
+        <a href="academic.html" class="nav-link text-white hover:text-gray-300">Academic</a>
+        <a href="students.html" class="nav-link text-white hover:text-gray-300">Students</a>
+        <a href="contact.html" class="nav-link text-white hover:text-gray-300">Contact</a>
       </nav>
 
       <!-- Action Buttons -->
       <div class="space-x-3">
-        <a href="#apply" class="bg-yellow-400 hover:bg-yellow-500 text-blue-900 font-semibold px-5 py-2 rounded-full text-sm shadow-sm">APPLY NOW</a>
-        <a href="#help" class="border border-white text-white hover:bg-white hover:text-blue-800 font-semibold px-5 py-2 rounded-full text-sm shadow-sm">GET HELP</a>
+        <a href="#apply" class="bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-semibold px-4 py-2 rounded-full text-sm shadow-sm">Enroll Now</a>
+        <a href="#help" class="border border-white text-white hover:bg-white hover:text-gray-900 font-semibold px-4 py-2 rounded-full text-sm shadow-sm">Get Help</a>
       </div>
     </div>
   </header>
@@ -274,10 +260,13 @@ Class starts on April 14th.</p>
   autoScrollRight();
 </script>
 
-  <!-- Footer -->
-  <footer class="bg-blue-800 text-white text-center p-4 mt-12">
-    <p>&copy; 2025 Workforce Career Institute. All rights reserved.</p>
+   <footer class="bg-gray-800 text-white text-center py-6 mt-16 shadow-inner border-t-4 border-yellow-400">
+    <div class="container mx-auto">
+      <p class="text-sm">&copy; 2025 Workforce Career Institute. All rights reserved.</p>
+      <p class="text-xs mt-1 italic text-gray-400">Empowering Futures with Excellence and Innovation</p>
+    </div>
   </footer>
+
 
   <!-- JavaScript for Image Carousel with Captions -->
   <script>
