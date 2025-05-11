@@ -480,5 +480,27 @@
       <p class="text-xs mt-1 italic text-gray-400">Empowering Futures with Excellence and Innovation</p>
     </div>
   </footer>
+
+      <script>
+  const testimonials = document.querySelectorAll('.testimonial');
+  let currentTestimonial = 0;
+
+  setInterval(() => {
+    testimonials[currentTestimonial].classList.remove('opacity-100');
+    testimonials[currentTestimonial].classList.add('opacity-0');
+
+    setTimeout(() => {
+      testimonials[currentTestimonial].classList.add('hidden');
+      currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+      testimonials[currentTestimonial].classList.remove('hidden');
+
+      setTimeout(() => {
+        testimonials[currentTestimonial].classList.remove('opacity-0');
+        testimonials[currentTestimonial].classList.add('opacity-100');
+      }, 50);
+    }, 1000);
+  }, 6000);
+</script>
+
 </body>
 </html>
