@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Workforce Career Institute - Enhanced Homepage</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    .fade {
+      transition: opacity 1s ease-in-out;
+    }
+    .carousel-caption {
+      position: absolute;
+      bottom: 1.5rem;
+      left: 1.5rem;
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
+    }
+    .nav-link {
+      position: relative;
+      padding-right: 1rem;
+      padding-left: 1rem;
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      width: 0;
+      height: 2px;
+      background-color: white;
+      transition: width 0.3s ease-in-out;
+    }
+    .nav-link:hover::after {
+      width: 100%;
+    }
+    .dropdown:hover .dropdown-menu {
+      display: block;
+    }
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      background-color: white;
+      color: black;
+      min-width: 200px;
+      z-index: 1000;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    }
+    .dropdown-menu a {
+      display: block;
+      padding: 10px;
+      color: black;
+      text-decoration: none;
+    }
+    .dropdown-menu a:hover {
+      background-color: #f1f1f1;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+  <!-- Header -->
+  <header class="bg-gray-800 text-white shadow sticky top-0 z-50 border-b-4 border-yellow-400">
+    <div class="container mx-auto flex items-center justify-between py-4 px-4">
+      <div class="flex items-center space-x-3">
+        <img src="https://echizen593.github.io/Workforce/LOGO2.png" alt="Logo" class="h-16 w-auto object-contain">
+        <div>
+          <span class="block text-2xl font-bold">WORKFORCE</span>
+          <span class="block text-m font-light tracking-widest text-gray-300 w-full">CAREER INSTITUTE</span>
+        </div>
+      </div>
+
+      <!-- Navigation -->
+      <nav class="hidden lg:flex text-lg font-semibold tracking-wide space-x-6 divide-x divide-gray-500">
+        <a href="index.html" class="nav-link text-white hover:text-gray-300">HOME</a>
+        <div class="relative dropdown">
+          <a href="#" class="px-4 hover:text-white nav-link">ABOUT US</a>
+          <div class="dropdown-menu">
+            <a href="profile.html">Profile</a>
+            <a href="vision.html">Vision, Mission and Core Values</a>
+            <a href="legalities.html">Legalities</a>
+            <a href="board.html">Board of Directors</a>
+            <a href="team.html">The Working Team</a>
+            <a href="teaching.html">The Teaching Force</a>
+            <a href="community.html">Community Extension Program</a>
+          </div>
+        </div>
+        <a href="academic.html" class="px-4 hover:text-white">ACADEMIC</a>
+        <div class="relative dropdown">
+          <a href="#" class="px-4 hover:text-white nav-link">STUDENTS</a>
+          <div class="dropdown-menu">
+            <a href="admission.html">Admission and Registration</a>
+            <a href="student.html">Student Support</a>
+            <a href="accounts.html">Accounts</a>
+            <a href="research.html">Student Research</a>
+            <a href="career.html">Career Center</a>
+            <a href="classroom.html">The Classroom</a>
+          </div>
+        </div>
+        <a href="contact.html" class="px-4 hover:text-white">CONTACT</a>
+      </nav>
+
+      <!-- Action Buttons -->
+      <div class="space-x-3">
+        <a href="#apply" class="bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-semibold px-4 py-2 rounded-full text-sm shadow-sm">Enroll Now</a>
+        <a href="#help" class="border border-white text-white hover:bg-white hover:text-gray-900 font-semibold px-4 py-2 rounded-full text-sm shadow-sm">Get Help</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section with Carousel -->
+  <section id="home" class="py-16 bg-white">
+    <div class="container mx-auto text-center px-4">
+      <h2 class="text-4xl font-extrabold mb-4 text-blue-800">Empowering Your Future Through Career-Focused Education</h2>
+      <p class="mb-8 text-lg text-gray-700">Explore industry-aligned programs, flexible learning options, and expert guidance to help you succeed in today’s workforce.</p>
+      <div class="relative w-full max-w-6xl h-[500px] mx-auto mb-6">
+        <img id="carouselImage" class="w-full h-full object-cover rounded-lg shadow-lg fade opacity-100" src="https://echizen593.github.io/Workforce/IMG1.jpg" alt="Slideshow Image">
+        <div id="carouselCaption" class="carousel-caption text-sm">Welcome to Workforce Career Institute</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Program Categories with Smooth Scroll -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center text-cyan-600 mb-10">Program Categories</h2>
+      <div class="relative overflow-hidden">
+        <div id="scrollWrapper" class="flex space-x-6 w-max px-2 animate-scroll">
+          <!-- Cards (repeat to simulate loop) -->
+          <div class="w-48 bg-blue-400 text-white rounded-lg p-6 text-center shadow-md">💻<h3 class="font-semibold text-md mt-2">Business & Accountancy</h3></div>
+          <div class="w-48 bg-blue-900 text-white rounded-lg p-6 text-center shadow-md">❤️<h3 class="font-semibold text-md mt-2">Healthcare</h3></div>
+          <div class="w-48 bg-pink-500 text-white rounded-lg p-6 text-center shadow-md">📘<h3 class="font-semibold text-md mt-2">Education & Liberal Arts</h3></div>
+          <div class="w-48 bg-blue-600 text-white rounded-lg p-6 text-center shadow-md">🤝<h3 class="font-semibold text-md mt-2">Social Work</h3></div>
+          <div class="w-48 bg-green-500 text-white rounded-lg p-6 text-center shadow-md">🔒<h3 class="font-semibold text-md mt-2">Criminology</h3></div>
+          <div class="w-48 bg-pink-500 text-white rounded-lg p-6 text-center shadow-md">🎧<h3 class="font-semibold text-md mt-2">Engineering</h3></div>
+
+          <!-- Repeat for seamless scroll -->
+          <div class="w-48 bg-blue-400 text-white rounded-lg p-6 text-center shadow-md">💻<h3 class="font-semibold text-md mt-2">Business & Accountancy</h3></div>
+          <div class="w-48 bg-blue-900 text-white rounded-lg p-6 text-center shadow-md">❤️<h3 class="font-semibold text-md mt-2">Healthcare</h3></div>
+          <div class="w-48 bg-pink-500 text-white rounded-lg p-6 text-center shadow-md">📘<h3 class="font-semibold text-md mt-2">Education & Liberal Arts</h3></div>
+          <div class="w-48 bg-blue-600 text-white rounded-lg p-6 text-center shadow-md">🤝<h3 class="font-semibold text-md mt-2">Social Work</h3></div>
+          <div class="w-48 bg-green-500 text-white rounded-lg p-6 text-center shadow-md">🔒<h3 class="font-semibold text-md mt-2">Criminology</h3></div>
+          <div class="w-48 bg-pink-500 text-white rounded-lg p-6 text-center shadow-md">🎧<h3 class="font-semibold text-md mt-2">Engineering</h3></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white text-center py-6 mt-16 shadow-inner border-t-4 border-yellow-400">
+    <div class="container mx-auto">
+      <p class="text-sm">&copy; 2025 Workforce Career Institute. All rights reserved.</p>
+      <p class="text-xs mt-1 italic text-gray-400">Empowering Futures with Excellence and Innovation</p>
+    </div>
+  </footer>
+
+  <!-- Carousel JavaScript -->
+  <script>
+    const images = [
+      {
+        src:'https://echizen593.github.io/Workforce/IMG1.jpg',
+        caption: 'Welcome to Workforce Career Institute'
+      },
+      {
+        src:'https://echizen593.github.io/Workforce/IMG2.jpg',
+        caption: 'Advance your skills with our career programs'
+      },
+      {
+        src:'https://echizen593.github.io/Workforce/IMG3.jpg',
+        caption: 'Student success is our mission'
+      },
+      {
+        src:'https://echizen593.github.io/Workforce/IMG5.jpg',
+        caption: 'Join us today and start your journey'
+      }
+    ];
+    let index = 0;
+    const imageElement = document.getElementById('carouselImage');
+    const captionElement = document.getElementById('carouselCaption');
+
+    setInterval(() => {
+      imageElement.classList.remove('opacity-100');
+      imageElement.classList.add('opacity-0');
+      setTimeout(() => {
+        index = (index + 1) % images.length;
+        imageElement.src = images[index].src;
+        captionElement.textContent = images[index].caption;
+        imageElement.classList.remove('opacity-0');
+        imageElement.classList.add('opacity-100');
+      }, 500);
+    }, 4000);
+  </script>
+
+  <!-- Smooth Horizontal Scrolling (CSS-based animation) -->
+  <style>
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .animate-scroll {
+      animation: scroll 40s linear infinite;
+    }
+  </style>
+</body>
+</html>
