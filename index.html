@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -42,25 +42,42 @@
       </div>
 
       <!-- Navigation -->
-      <nav class="hidden lg:flex text-lg font-semibold tracking-wide space-x-6 divide-x divide-gray-500">
-        <a href="index.html" class="nav-link text-white hover:text-gray-300">Home</a>
-       <div class="relative group">
-  <button class="nav-link text-white hover:text-gray-300 focus:outline-none">About Us</button>
-  <div class="absolute left-0 top-full bg-white text-gray-800 shadow-lg rounded-md mt-1 hidden group-hover:block z-50 min-w-[250px]">
-    <a href="profile.html" class="block px-4 py-2 hover:bg-gray-100">Profile</a>
-    <a href="vision.html" class="block px-4 py-2 hover:bg-gray-100">Vision, Mission and Core Values</a>
-    <a href="legalities.html" class="block px-4 py-2 hover:bg-gray-100">Legalities</a>
-    <a href="board.html" class="block px-4 py-2 hover:bg-gray-100">Board of Directors</a>
-    <a href="team.html" class="block px-4 py-2 hover:bg-gray-100">The Working Team</a>
-    <a href="faculty.html" class="block px-4 py-2 hover:bg-gray-100">The Teaching Force</a>
-    <a href="extension.html" class="block px-4 py-2 hover:bg-gray-100">Community Extension Program</a>
-  </div>
-
-
+  <header class="bg-blue-800 text-white shadow sticky top-0 z-50">
+    <div class="container mx-auto flex items-center justify-between py-4 px-1">
+      <div class="flex items-center space-x-3">
+        <img src="https://echizen593.github.io/Workforce/LOGO2.png" alt="Logo" class="h-16 w-auto object-contain">
+        <h1 class="leading-tight">
+          <span class="block text-2xl font-bold">WORKFORCE</span>
+          <span class="block text-lg font-semibold">CAREER INSTITUTE</span>
+        </h1>
+      </div>
+  <nav class="hidden lg:flex text-lg font-semibold tracking-wide space-x-6 divide-x divide-gray-500">        
+    <a href="index.html" class="px-4 hover:text-gray-200">HOME</a>
+        <div class="relative dropdown">
+          <a href="#" class="px-4 hover:text-gray-200 nav-link">ABOUT US</a>
+          <div class="dropdown-menu">
+            <a href="profile.html">Profile</a>
+            <a href="vision.html">Vision, Mission and Core Values</a>
+            <a href="legalities.html">Legalities</a>
+            <a href="board.html">Board of Directors</a>
+            <a href="team.html">The Working Team</a>
+            <a href="teaching.html">The Teaching Force</a>
+            <a href="community.html">Community Extension Program</a>
+          </div>
         </div>
-        <a href="academic.html" class="nav-link text-white hover:text-gray-300">Academic</a>
-        <a href="students.html" class="nav-link text-white hover:text-gray-300">Students</a>
-        <a href="contact.html" class="nav-link text-white hover:text-gray-300">Contact</a>
+        <a href="academic.html" class="px-4 hover:text-gray-200">ACADEMIC</a>
+        <div class="relative dropdown">
+          <a href="#" class="px-4 hover:text-gray-200 nav-link">STUDENTS</a>
+          <div class="dropdown-menu">
+            <a href="admission.html">Admission and Registration</a>
+            <a href="student.html">Student Support</a>
+            <a href="accounts.html">Accounts</a>
+            <a href="research.html">Student Research</a>
+            <a href="career.html">Career Center</a>
+            <a href="classroom.html">The Classroom</a>
+          </div>
+        </div>
+        <a href="contact.html" class="px-4 hover:text-gray-200">CONTACT</a>
       </nav>
 
       <!-- Action Buttons -->
