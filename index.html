@@ -130,26 +130,76 @@
     </div>
   </header>
 
-
-<!-- Homepage with Enhanced Image Carousel -->
-<section id="home" class="pt-12 pb-10 bg-white">
-  <div class="container mx-auto text-center px-4">
-    <h2 class="text-4xl lg:text-3xl font-extrabold mb-6 text-blue-800 leading-tight">Empowering Your Future Through Career-Focused Education</h2>
-    <p class="mb-10 text-m text-gray-700 max-w-3xl mx-auto">
-      Explore industry-aligned programs, flexible learning options, and expert guidance to help you succeed in today’s workforce.
-    </p>
-
-    <!-- Carousel -->
-    <div class="relative w-full max-w-7xl h-[650px] mx-auto mb-8 rounded-3xl overflow-hidden shadow-2xl group">
-      <img id="carouselImage" class="w-full h-full object-cover rounded-3xl transition-opacity duration-500 opacity-100" src="https://echizen593.github.io/Workforce/IMG1.jpg" alt="Slideshow Image">
-      
-      <!-- Caption Top Left (Yellow-Orange Color) -->
-      <div id="carouselCaption" class="absolute top-6 left-6 text-yellow-500 bg-black/60 backdrop-blur-md px-5 py-3 rounded-lg text-lg sm:text-xl md:text-2xl font-semibold shadow-lg max-w-lg text-left">
-        Welcome to Workforce Career Institute
+   <!-- Homepage with Enhanced Image Carousel -->
+<section id="home" class="pt-12 pb-6 bg-white">
+    <div class="container mx-auto text-center px-4">
+      <h2 class="text-4xl font-extrabold mb-4 text-blue-800">Empowering Your Future Through Career-Focused Education</h2>
+      <p class="mb-8 text-lg text-gray-700">Explore industry-aligned programs, flexible learning options, and expert guidance to help you succeed in today’s workforce.</p>
+      <div class="relative w-full max-w-6xl h-[500px] mx-auto mb-6">
+      <img id="carouselImage" class="w-full h-full object-cover rounded-lg shadow-lg fade opacity-100" src="https://echizen593.github.io/Workforce/IMG1.jpg" alt="Slideshow Image">
+      <div id="carouselCaption" class="carousel-caption text-sm">Welcome to Workforce Career Institute</div>
+  <!-- Carousel Section -->
+  <section class="relative overflow-hidden">
+    <div id="carousel" class="relative w-full">
+       <div class="carousel-slide hidden">
+        <img src="https://echizen593.github.io/Workforce/carousel1.jpg" alt="Slide 1" class="carousel-image">
+      </div>
+      <div class="carousel-slide hidden">
+        <img src="https://echizen593.github.io/Workforce/carousel2.jpg" alt="Slide 2" class="carousel-image">
+      </div>
+      <div class="carousel-slide hidden">
+        <img src="https://echizen593.github.io/Workforce/carousel3.jpg" alt="Slide 3" class="carousel-image">
+      </div>
+       <div class="carousel-slide hidden">
+        <img src="https://echizen593.github.io/Workforce/carousel4.jpg" alt="Slide 4" class="carousel-image">
       </div>
     </div>
-  </div>
-</section>
+      </div>
+    </div> 
+  </section>
+
+  <!-- JavaScript for Image Carousel with Captions -->
+  <script>
+    const images = [
+      {
+        src:'https://echizen593.github.io/Workforce/IMG1.jpg',
+        caption: 'Welcome to Workforce Career Institute'
+      },
+      {
+        src:'https://echizen593.github.io/Workforce/IMG2.jpg',
+        caption: 'Advance your skills with our career programs'
+      },
+      {
+        src:'https://echizen593.github.io/Workforce/IMG3.jpg',
+        caption: 'Student success is our mission'
+      },
+      {
+        src:'https://echizen593.github.io/Workforce/IMG5.jpg',
+        caption: 'Join us today and start your journey'
+      }
+    ];
+    let index = 0;
+    const imageElement = document.getElementById('carouselImage');
+    const captionElement = document.getElementById('carouselCaption');
+
+    setInterval(() => {
+      imageElement.classList.remove('opacity-100');
+      imageElement.classList.add('opacity-0');
+      setTimeout(() => {
+        index = (index + 1) % images.length;
+        imageElement.src = images[index].src;
+        captionElement.textContent = images[index].caption;
+        imageElement.classList.remove('opacity-0');
+        imageElement.classList.add('opacity-100');
+      }, 500);
+    }, 4000);
+  </script>
+
+ 
+
+        
+
+
 
 
 <!-- ========= NEWS & FEATURES (ENHANCED) ========= -->
