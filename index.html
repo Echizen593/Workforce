@@ -77,6 +77,12 @@
     .section-title {
       @apply text-4xl font-extrabold mb-8 text-blue-800 inline-block border-b-4 border-yellow-400 pb-2;
     }
+
+  #testimonialSlider {
+    transition: transform 1s ease-in-out;
+  }
+</style>
+
   </style>
 </head>
 <body class="bg-gray-50 text-gray-800 font-sans">
@@ -423,56 +429,35 @@
   const testimonialsContainer = document.getElementById('testimonialsContainer');
   const testimonialSlider = document.getElementById('testimonialSlider');
   const totalTestimonials = testimonialSlider.children.length;
-  const testimonialWidth = testimonialsContainer.offsetWidth; // Get the container width
-  const testimonialsPerSlide = 3; // 3 testimonials per slide (3-column layout)
-  const slideWidth = testimonialWidth * testimonialsPerSlide; // Calculate the slide width
+  const testimonialsPerSlide = 3;
+  const slideCount = Math.ceil(totalTestimonials / testimonialsPerSlide);
+  const slideGap = 24; // Assuming there's a 6 (1.5rem) margin between cards
 
   let currentIndex = 0;
 
-  // Function to move the testimonials
   function moveTestimonials() {
-    // Increment index to move to the next set of testimonials
-    currentIndex = (currentIndex + 1) % Math.ceil(totalTestimonials / testimonialsPerSlide);
+    // Fade out
+    testimonialSlider.classList.add('opacity-0', 'transition-opacity', 'duration-1000');
 
-    // Move the slider to show the next set of testimonials
-    testimonialSlider.style.transform = `translateX(-${slideWidth * currentIndex}px)`;
-    
-    // Apply flash effect
-    flashTestimonials();
+    setTimeout(() => {
+      currentIndex = (currentIndex + 1) % slideCount;
+
+      // Calculate exact offset based on card width and gap
+      const cardWidth = testimonialsContainer.offsetWidth / testimonialsPerSlide;
+      const totalOffset = currentIndex * (cardWidth + slideGap) * testimonialsPerSlide;
+
+      testimonialSlider.style.transform = `translateX(-${totalOffset}px)`;
+
+      // Fade in
+      testimonialSlider.classList.remove('opacity-0');
+    }, 1000); // match fade-out duration
   }
 
-  // Function to apply flash effect
-  function flashTestimonials() {
-    const testimonials = testimonialSlider.children;
-    
-    // Remove existing flash class
-    Array.from(testimonials).forEach(testimonial => testimonial.classList.remove('flash'));
+  setInterval(moveTestimonials, 10000);
 
-    // Add flash class to current testimonials
-    Array.from(testimonials).slice(currentIndex * testimonialsPerSlide, (currentIndex + 1) * testimonialsPerSlide).forEach(testimonial => testimonial.classList.add('flash'));
-  }
-
-  // Automatically move the testimonials every 10 seconds
-  setInterval(moveTestimonials, 10000); // 10000ms = 10 seconds
-
-  // Ensure slider starts at the first testimonial set and apply flash
+  // Start at the beginning
   testimonialSlider.style.transform = 'translateX(0)';
-  flashTestimonials();
 </script>
-
-<style>
-  /* Flash animation */
-  @keyframes flash {
-    0% { opacity: 0; }
-    50% { opacity: 1; }
-    100% { opacity: 0; }
-  }
-
-  /* Flash class to apply animation */
-  .flash {
-    animation: flash 2s ease-in-out forwards;
-  }
-</style>
 
    <footer class="bg-gray-800 text-white text-center py-6 mt-16 shadow-inner border-t-4 border-yellow-400">
     <div class="container mx-auto">
@@ -481,26 +466,7 @@
     </div>
   </footer>
 
-      <script>
-  const testimonials = document.querySelectorAll('.testimonial');
-  let currentTestimonial = 0;
-
-  setInterval(() => {
-    testimonials[currentTestimonial].classList.remove('opacity-100');
-    testimonials[currentTestimonial].classList.add('opacity-0');
-
-    setTimeout(() => {
-      testimonials[currentTestimonial].classList.add('hidden');
-      currentTestimonial = (currentTestimonial + 1) % testimonials.length;
-      testimonials[currentTestimonial].classList.remove('hidden');
-
-      setTimeout(() => {
-        testimonials[currentTestimonial].classList.remove('opacity-0');
-        testimonials[currentTestimonial].classList.add('opacity-100');
-      }, 50);
-    }, 1000);
-  }, 6000);
-</script>
+     
 
 </body>
 </html>
