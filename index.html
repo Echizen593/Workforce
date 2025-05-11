@@ -152,8 +152,49 @@
         <img src="https://echizen593.github.io/Workforce/carousel3.jpg" alt="Slide 3" class="carousel-image">
       </div>
     </div>
-    <!-- JS controls will cycle through slides -->
+   
   </section>
+
+  <!-- JavaScript for Image Carousel with Captions -->
+  <script>
+    const images = [
+      {
+        src:'https://echizen593.github.io/Workforce/IMG1.jpg',
+        caption: 'Welcome to Workforce Career Institute'
+      },
+      {
+        src:'https://echizen593.github.io/Workforce/IMG2.jpg',
+        caption: 'Advance your skills with our career programs'
+      },
+      {
+        src:'https://echizen593.github.io/Workforce/IMG3.jpg',
+        caption: 'Student success is our mission'
+      },
+      {
+        src:'https://echizen593.github.io/Workforce/IMG5.jpg',
+        caption: 'Join us today and start your journey'
+      }
+    ];
+    let index = 0;
+    const imageElement = document.getElementById('carouselImage');
+    const captionElement = document.getElementById('carouselCaption');
+
+    setInterval(() => {
+      imageElement.classList.remove('opacity-100');
+      imageElement.classList.add('opacity-0');
+      setTimeout(() => {
+        index = (index + 1) % images.length;
+        imageElement.src = images[index].src;
+        captionElement.textContent = images[index].caption;
+        imageElement.classList.remove('opacity-0');
+        imageElement.classList.add('opacity-100');
+      }, 500);
+    }, 4000);
+  </script>
+
+ 
+
+        
 
  <!-- ========= NEWS & FEATURES (FIXED) ========= -->
   <section class="py-16 bg-gray-100" id="news">
@@ -318,43 +359,6 @@
   </footer>
 
 
-  <!-- JavaScript for Image Carousel with Captions -->
-  <script>
-    const images = [
-      {
-        src:'https://echizen593.github.io/Workforce/IMG1.jpg',
-        caption: 'Welcome to Workforce Career Institute'
-      },
-      {
-        src:'https://echizen593.github.io/Workforce/IMG2.jpg',
-        caption: 'Advance your skills with our career programs'
-      },
-      {
-        src:'https://echizen593.github.io/Workforce/IMG3.jpg',
-        caption: 'Student success is our mission'
-      },
-      {
-        src:'https://echizen593.github.io/Workforce/IMG5.jpg',
-        caption: 'Join us today and start your journey'
-      }
-    ];
-    let index = 0;
-    const imageElement = document.getElementById('carouselImage');
-    const captionElement = document.getElementById('carouselCaption');
 
-    setInterval(() => {
-      imageElement.classList.remove('opacity-100');
-      imageElement.classList.add('opacity-0');
-      setTimeout(() => {
-        index = (index + 1) % images.length;
-        imageElement.src = images[index].src;
-        captionElement.textContent = images[index].caption;
-        imageElement.classList.remove('opacity-0');
-        imageElement.classList.add('opacity-100');
-      }, 500);
-    }, 4000);
-  </script>
-
- 
 </body>
 </html>
