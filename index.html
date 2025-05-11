@@ -131,76 +131,34 @@
   </header>
 
 
-  <!-- Homepage with Enhanced Image Carousel -->
-<section id="home" class="pt-12 pb-6 bg-white">
+<!-- Homepage with Enhanced Image Carousel -->
+<section id="home" class="pt-16 pb-10 bg-white">
   <div class="container mx-auto text-center px-4">
-    <h2 class="text-4xl font-extrabold mb-4 text-blue-800">Empowering Your Future Through Career-Focused Education</h2>
-    <p class="mb-8 text-lg text-gray-700">Explore industry-aligned programs, flexible learning options, and expert guidance to help you succeed in today’s workforce.</p>
-    <div class="relative w-full max-w-6xl h-[500px] mx-auto mb-6 rounded-lg overflow-hidden">
-      <img id="carouselImage" class="w-full h-full object-cover rounded-lg shadow-xl fade opacity-100" src="https://echizen593.github.io/Workforce/IMG1.jpg" alt="Slideshow Image">
-      <div id="carouselCaption" class="carousel-caption text-base sm:text-lg md:text-xl lg:text-2xl font-semibold shadow-md">Welcome to Workforce Career Institute</div>
-      <!-- Navigation buttons -->
-      <button id="prevBtn" class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-70 hover:bg-opacity-90 text-gray-800 rounded-full p-2 shadow-md z-10">⟵</button>
-      <button id="nextBtn" class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-70 hover:bg-opacity-90 text-gray-800 rounded-full p-2 shadow-md z-10">⟶</button>
+    <h2 class="text-4xl lg:text-5xl font-extrabold mb-6 text-blue-800 leading-tight">Empowering Your Future Through Career-Focused Education</h2>
+    <p class="mb-10 text-lg text-gray-700 max-w-3xl mx-auto">
+      Explore industry-aligned programs, flexible learning options, and expert guidance to help you succeed in today’s workforce.
+    </p>
+
+    <!-- Carousel -->
+    <div class="relative w-full max-w-7xl h-[650px] mx-auto mb-8 rounded-3xl overflow-hidden shadow-2xl group">
+      <img id="carouselImage" class="w-full h-full object-cover rounded-3xl transition-opacity duration-500 opacity-100" src="https://echizen593.github.io/Workforce/IMG1.jpg" alt="Slideshow Image">
+      
+      <!-- Caption -->
+      <div id="carouselCaption" class="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white bg-black/60 backdrop-blur-md px-6 py-4 rounded-xl text-xl sm:text-2xl md:text-3xl font-semibold shadow-lg max-w-3xl w-[90%]">
+        Welcome to Workforce Career Institute
+      </div>
+
+      <!-- Nav Buttons -->
+      <button id="prevBtn" aria-label="Previous" class="absolute left-6 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-80 hover:bg-opacity-100 text-gray-800 rounded-full p-3 sm:p-4 shadow-md transition hover:scale-105 z-10">
+        ⟵
+      </button>
+      <button id="nextBtn" aria-label="Next" class="absolute right-6 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-80 hover:bg-opacity-100 text-gray-800 rounded-full p-3 sm:p-4 shadow-md transition hover:scale-105 z-10">
+        ⟶
+      </button>
     </div>
   </div>
 </section>
 
-<script>
-  const images = [
-    {
-      src:'https://echizen593.github.io/Workforce/IMG1.jpg',
-      caption: 'Welcome to Workforce Career Institute'
-    },
-    {
-      src:'https://echizen593.github.io/Workforce/IMG2.jpg',
-      caption: 'Advance your skills with our career programs'
-    },
-    {
-      src:'https://echizen593.github.io/Workforce/IMG3.jpg',
-      caption: 'Student success is our mission'
-    },
-    {
-      src:'https://echizen593.github.io/Workforce/IMG5.jpg',
-      caption: 'Join us today and start your journey'
-    }
-  ];
-  let index = 0;
-  const imageElement = document.getElementById('carouselImage');
-  const captionElement = document.getElementById('carouselCaption');
-  const prevBtn = document.getElementById('prevBtn');
-  const nextBtn = document.getElementById('nextBtn');
-
-  function showImage(idx) {
-    imageElement.classList.remove('opacity-100');
-    imageElement.classList.add('opacity-0');
-    setTimeout(() => {
-      imageElement.src = images[idx].src;
-      captionElement.textContent = images[idx].caption;
-      imageElement.classList.remove('opacity-0');
-      imageElement.classList.add('opacity-100');
-    }, 500);
-  }
-
-  prevBtn.addEventListener('click', () => {
-    index = (index - 1 + images.length) % images.length;
-    showImage(index);
-  });
-
-  nextBtn.addEventListener('click', () => {
-    index = (index + 1) % images.length;
-    showImage(index);
-  });
-
-  setInterval(() => {
-    index = (index + 1) % images.length;
-    showImage(index);
-  }, 5000);
-</script>
-
- 
-
-        
 
 <!-- ========= NEWS & FEATURES (ENHANCED) ========= -->
 <section class="pt-12 pb-20 bg-gray-100" id="news">
