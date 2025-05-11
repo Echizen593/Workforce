@@ -367,36 +367,105 @@
       
   </section>
 
-      <!-- ===== Student Testimonials ===== -->
-<section class="py-16 bg-gray-50">
+<section id="testimonials" class="py-16 bg-gray-100">
   <div class="container mx-auto px-4">
-    <h2 class="text-3xl font-bold text-center text-blue-800 mb-10">What Our Students Say</h2>
-    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-      
-      <!-- Testimonial 1 -->
-      <div class="bg-white rounded-lg shadow-lg p-6 text-center">
-        <p class="text-gray-700 mb-4 italic">"The instructors are very helpful and the training is hands-on. I feel ready for my career now!"</p>
-        <h4 class="text-lg font-semibold text-blue-800">Maria D.</h4>
-        <p class="text-sm text-gray-500">Graduate, Bookkeeping NC III</p>
-      </div>
+    <h2 class="text-3xl font-bold text-center text-cyan-600 mb-10">Student Testimonials</h2>
 
+    <!-- Testimonials Container -->
+    <div id="testimonialsContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Testimonial 1 -->
+      <div class="bg-white p-6 rounded-lg shadow-lg">
+        <p class="text-gray-700 mb-4">"The Workforce Career Institute has helped me develop the skills needed to succeed in my career. The instructors are passionate and knowledgeable!"</p>
+        <h3 class="text-xl font-semibold text-blue-900">Jane Doe</h3>
+        <p class="text-sm text-gray-500">Business & Accountancy</p>
+      </div>
+      
       <!-- Testimonial 2 -->
-      <div class="bg-white rounded-lg shadow-lg p-6 text-center">
-        <p class="text-gray-700 mb-4 italic">"I loved the flexible learning options and the support from the staff. Highly recommend!"</p>
-        <h4 class="text-lg font-semibold text-blue-800">John R.</h4>
-        <p class="text-sm text-gray-500">Graduate, Healthcare Services</p>
+      <div class="bg-white p-6 rounded-lg shadow-lg">
+        <p class="text-gray-700 mb-4">"The hands-on approach at Workforce has been a game-changer for me. I feel more confident and ready for the workforce now."</p>
+        <h3 class="text-xl font-semibold text-blue-900">John Smith</h3>
+        <p class="text-sm text-gray-500">Healthcare</p>
       </div>
 
       <!-- Testimonial 3 -->
-      <div class="bg-white rounded-lg shadow-lg p-6 text-center">
-        <p class="text-gray-700 mb-4 italic">"Workforce Career Institute helped me gain confidence and skills that landed me a job right away."</p>
-        <h4 class="text-lg font-semibold text-blue-800">Liza S.</h4>
-        <p class="text-sm text-gray-500">Graduate, Business Management</p>
+      <div class="bg-white p-6 rounded-lg shadow-lg">
+        <p class="text-gray-700 mb-4">"The courses were well-structured, and the career services department helped me land my first job after graduation!"</p>
+        <h3 class="text-xl font-semibold text-blue-900">Emily Johnson</h3>
+        <p class="text-sm text-gray-500">Engineering</p>
       </div>
+      
+      <!-- Add more testimonials here -->
+    </div>
 
+    <!-- Pagination Controls -->
+    <div class="flex justify-center mt-10 space-x-4">
+      <button id="prevPage" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700">Previous</button>
+      <button id="nextPage" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700">Next</button>
     </div>
   </div>
 </section>
+
+<script>
+  const testimonialsPerPage = 3; // Number of testimonials per page
+  let currentPage = 1;
+
+  const testimonials = [
+    { name: "Jane Doe", text: "The Workforce Career Institute has helped me develop the skills needed to succeed in my career. The instructors are passionate and knowledgeable!", program: "Business & Accountancy" },
+    { name: "John Smith", text: "The hands-on approach at Workforce has been a game-changer for me. I feel more confident and ready for the workforce now.", program: "Healthcare" },
+    { name: "Emily Johnson", text: "The courses were well-structured, and the career services department helped me land my first job after graduation!", program: "Engineering" },
+    { name: "Chris Brown", text: "Workforce gave me the tools to start my career. The support from the staff was unmatched.", program: "Social Work" },
+    { name: "Alice Davis", text: "Thanks to Workforce, I now have the skills I need to succeed in the tech industry. The training was top-notch!", program: "IT & Networking" },
+    { name: "Liam White", text: "The flexible schedule and hands-on learning made all the difference in my education at Workforce.", program: "Healthcare" },
+    { name: "Sophia Green", text: "I never thought I’d be able to get a job in accounting so soon, but Workforce prepared me well.", program: "Business & Accountancy" },
+    { name: "Jackson Black", text: "The career support at Workforce was incredible. They helped me get my resume ready and even set up interviews!", program: "Marketing" },
+    { name: "Olivia Blue", text: "I loved the way the programs were tailored to current industry standards. It felt like I was getting the best education possible.", program: "Education & Liberal Arts" }
+  ];
+
+  // Function to render testimonials for the current page
+  function renderTestimonials() {
+    const startIndex = (currentPage - 1) * testimonialsPerPage;
+    const endIndex = currentPage * testimonialsPerPage;
+    const testimonialsToShow = testimonials.slice(startIndex, endIndex);
+    const testimonialsContainer = document.getElementById("testimonialsContainer");
+    testimonialsContainer.innerHTML = '';
+
+    testimonialsToShow.forEach(testimonial => {
+      const testimonialDiv = document.createElement("div");
+      testimonialDiv.classList.add("bg-white", "p-6", "rounded-lg", "shadow-lg");
+      testimonialDiv.innerHTML = `
+        <p class="text-gray-700 mb-4">${testimonial.text}</p>
+        <h3 class="text-xl font-semibold text-blue-900">${testimonial.name}</h3>
+        <p class="text-sm text-gray-500">${testimonial.program}</p>
+      `;
+      testimonialsContainer.appendChild(testimonialDiv);
+    });
+
+    // Hide "Previous" button if we're on the first page
+    document.getElementById("prevPage").disabled = currentPage === 1;
+
+    // Hide "Next" button if we've reached the last page
+    document.getElementById("nextPage").disabled = currentPage * testimonialsPerPage >= testimonials.length;
+  }
+
+  // Event listener for "Previous" button
+  document.getElementById("prevPage").addEventListener("click", () => {
+    if (currentPage > 1) {
+      currentPage--;
+      renderTestimonials();
+    }
+  });
+
+  // Event listener for "Next" button
+  document.getElementById("nextPage").addEventListener("click", () => {
+    if (currentPage * testimonialsPerPage < testimonials.length) {
+      currentPage++;
+      renderTestimonials();
+    }
+  });
+
+  // Initial render
+  renderTestimonials();
+</script>
 
    <footer class="bg-gray-800 text-white text-center py-6 mt-16 shadow-inner border-t-4 border-yellow-400">
     <div class="container mx-auto">
