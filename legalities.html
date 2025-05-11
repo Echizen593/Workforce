@@ -170,6 +170,15 @@
       <p class="text-sm">&copy; 2025 Workforce Career Institute. All rights reserved.</p>
       <p class="text-xs mt-1 italic text-gray-400">Empowering Futures with Excellence and Innovation</p>
     </div>
-  </footer>
+   </footer>
+  
+  <script>
+  document.querySelectorAll('.legal-image').forEach(img => {
+    img.addEventListener('click', () => {
+      img.classList.toggle('zoomed');
+    });
+  });
+</script>
+
 </body>
 </html>
