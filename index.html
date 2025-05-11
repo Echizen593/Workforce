@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Workforce Career Institute - Homepage</title>
+  <title>Workforce Career Institute - Enhanced Homepage</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <style>
     .fade {
@@ -11,33 +11,56 @@
     }
     .carousel-caption {
       position: absolute;
-      top: 1.5rem;
+      bottom: 1.5rem;
       left: 1.5rem;
       background: rgba(0, 0, 0, 0.6);
       color: white;
       padding: 0.5rem 1rem;
       border-radius: 0.5rem;
     }
-     .nav-link {
     .nav-link {
       position: relative;
       padding-right: 1rem;
       padding-left: 1rem;
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      width: 0;
+      height: 2px;
+      background-color: white;
+      transition: width 0.3s ease-in-out;
+    }
     .nav-link:hover::after {
       width: 100%;
     }
-     .dropdown:hover .dropdown-menu {
-
     .dropdown:hover .dropdown-menu {
       display: block;
     }
     .dropdown-menu {
+      display: none;
+      position: absolute;
+      background-color: white;
+      color: black;
+      min-width: 200px;
+      z-index: 1000;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    }
+    .dropdown-menu a {
+      display: block;
+      padding: 10px;
+      color: black;
+      text-decoration: none;
+    }
     .dropdown-menu a:hover {
       background-color: #f1f1f1;
     }
 
+    /* Enhanced board image style with yellow border */
     .legal-image {
-      border: 4px solid #FBBF24;
+      border: 4px solid #FBBF24; /* Tailwind yellow-400 */
       border-radius: 12px;
       box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
       width: 240px;
@@ -50,21 +73,21 @@
       box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     }
 
-    .carousel-image {
-      height: 500px;
-      object-fit: cover;
-      width: 100%;
+    /* Section title with bottom border */
+    .section-title {
+      @apply text-4xl font-extrabold mb-8 text-blue-800 inline-block border-b-4 border-yellow-400 pb-2;
     }
   </style>
 </head>
 <body class="bg-gray-50 text-gray-800 font-sans">
 
-  <!-- Navigation -->
-    <!-- Header -->
   <!-- Header -->
   <header class="bg-gray-800 text-white shadow sticky top-0 z-50 border-b-4 border-yellow-400">
     <div class="container mx-auto flex items-center justify-between py-4 px-4">
       <div class="flex items-center space-x-3">
+        <img src="https://echizen593.github.io/Workforce/LOGO2.png" alt="Logo" class="h-16 w-auto object-contain">
+        <div>
+          <span class="block text-2xl font-bold">WORKFORCE</span>
           <span class="block text-m font-light tracking-widest text-gray-300 w-full">CAREER INSTITUTE</span>
         </div>
       </div>
@@ -74,11 +97,27 @@
         <a href="index.html" class="nav-link text-white hover:text-gray-300">HOME</a>
         <div class="relative dropdown">
           <a href="#" class="px-4 hover:text-white nav-link">ABOUT US</a>
-         <div class="dropdown-menu">
           <div class="dropdown-menu">
             <a href="profile.html">Profile</a>
             <a href="vision.html">Vision, Mission and Core Values</a>
             <a href="legalities.html">Legalities</a>
+            <a href="board.html">Board of Directors</a>
+            <a href="team.html">The Working Team</a>
+            <a href="teaching.html">The Teaching Force</a>
+            <a href="community.html">Community Extension Program</a>
+          </div>
+        </div>
+        <a href="academic.html" class="px-4 hover:text-white">ACADEMIC</a>
+        <div class="relative dropdown">
+          <a href="#" class="px-4 hover:text-white nav-link">STUDENTS</a>
+          <div class="dropdown-menu">
+            <a href="admission.html">Admission and Registration</a>
+            <a href="student.html">Student Support</a>
+            <a href="accounts.html">Accounts</a>
+            <a href="research.html">Student Research</a>
+            <a href="career.html">Career Center</a>
+            <a href="classroom.html">The Classroom</a>
+          </div>
         </div>
         <a href="contact.html" class="px-4 hover:text-white">CONTACT</a>
       </nav>
@@ -90,6 +129,7 @@
       </div>
     </div>
   </header>
+
 
 <!-- The rest of your code remains unchanged -->
   <!-- Homepage with Enhanced Image Carousel -->
