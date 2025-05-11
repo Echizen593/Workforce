@@ -18,10 +18,18 @@
       padding: 0.5rem 1rem;
       border-radius: 0.5rem;
     }
-     .nav-link {
+    
+    .nav-link {
       position: relative;
-     
+      padding-right: 1rem;
+      padding-left: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      text-align: center;
     }
+    
     .nav-link::after {
       content: '';
       position: absolute;
@@ -35,7 +43,16 @@
     .nav-link:hover::after {
       width: 100%;
     }
-     .dropdown:hover .dropdown-menu {
+    
+    .dropdown > a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      text-align: center;
+    }
+    
+    .dropdown:hover .dropdown-menu {
       display: block;
     }
     .dropdown-menu {
@@ -52,15 +69,14 @@
       padding: 10px;
       color: black;
       text-decoration: none;
+      text-align: center;
     }
     .dropdown-menu a:hover {
       background-color: #f1f1f1;
     }
   </style>
-<body class="bg-gray-50 text-gray-800 font-sans">
-
-  <!-- Navigation -->
-    <!-- Header -->
+</head>
+<body>
   <header class="bg-gray-800 text-white shadow sticky top-0 z-50 border-b-4 border-yellow-400">
     <div class="container mx-auto flex items-center justify-between py-4 px-4">
       <div class="flex items-center space-x-3">
@@ -71,13 +87,11 @@
         </div>
       </div>
 
-      <!-- Navigation -->
-      <div class="flex-1 flex justify-center">
-      <nav class="hidden lg:flex text-lg font-semibold tracking-wide space-x-6 divide-x divide-gray-500">
+      <nav class="hidden lg:flex text-lg font-semibold tracking-wide space-x-6 divide-x divide-gray-500 h-12">
         <a href="index.html" class="nav-link text-white hover:text-gray-300">HOME</a>
-        <div class="relative dropdown">
-          <a href="#" class="px-4 hover:text-white nav-link">ABOUT US</a>
-         <div class="dropdown-menu">
+        <div class="relative dropdown h-full">
+          <a href="#" class="px-4 hover:text-white nav-link h-full">ABOUT US</a>
+          <div class="dropdown-menu">
             <a href="profile.html">Profile</a>
             <a href="vision.html">Vision, Mission and Core Values</a>
             <a href="legalities.html">Legalities</a>
@@ -85,12 +99,11 @@
             <a href="team.html">The Working Team</a>
             <a href="teaching.html">The Teaching Force</a>
             <a href="community.html">Community Extension Program</a>
-         
           </div>
         </div>
-        <a href="academic.html" class="px-4 hover:text-white">ACADEMIC</a>
-        <div class="relative dropdown">
-          <a href="#" class="px-4 hover:text-white nav-link">STUDENTS</a>
+        <a href="academic.html" class="px-4 hover:text-white nav-link">ACADEMIC</a>
+        <div class="relative dropdown h-full">
+          <a href="#" class="px-4 hover:text-white nav-link h-full">STUDENTS</a>
           <div class="dropdown-menu">
             <a href="admission.html">Admission and Registration</a>
             <a href="student.html">Student Support</a>
@@ -100,17 +113,15 @@
             <a href="classroom.html">The Classroom</a>
           </div>
         </div>
-        <a href="contact.html" class="px-4 hover:text-white">CONTACT</a>
-      </div>
+        <a href="contact.html" class="px-4 hover:text-white nav-link">CONTACT</a>
       </nav>
 
-      <!-- Action Buttons -->
       <div class="space-x-3">
         <a href="#apply" class="bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-semibold px-4 py-2 rounded-full text-sm shadow-sm">Enroll Now</a>
         <a href="#help" class="border border-white text-white hover:bg-white hover:text-gray-900 font-semibold px-4 py-2 rounded-full text-sm shadow-sm">Get Help</a>
       </div>
     </div>
-  </header>
+  </header
 
 <!-- The rest of your code remains unchanged -->
   <!-- Homepage with Enhanced Image Carousel -->
