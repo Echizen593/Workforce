@@ -73,6 +73,16 @@
       box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     }
 
+      @keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+    100% { transform: translateY(0); }
+  }
+
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
     /* Section title with bottom border */
     .section-title {
       @apply text-4xl font-extrabold mb-8 text-blue-800 inline-block border-b-4 border-yellow-400 pb-2;
@@ -330,6 +340,56 @@
   updateCarousel();
 </script>
 
+
+
+  <section class="bg-white py-20">
+  <div class="container mx-auto flex flex-col lg:flex-row items-center justify-between gap-12 px-6">
+    
+    <!-- Text Content -->
+    <div class="lg:w-1/2 text-center lg:text-left">
+      <p class="text-blue-500 font-semibold mb-2">A Great Place To Learn</p>
+      <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight mb-6">
+        Learn boldly & inspire.<br />
+        Get an education, not just a degree.
+      </h1>
+    </div>
+
+    <!-- Animated Circle Image -->
+    <div class="relative lg:w-1/2 flex justify-center">
+      <div class="w-[300px] h-[300px] md:w-[360px] md:h-[360px] rounded-full overflow-hidden animate-float shadow-lg">
+        <img src="https://echizen593.github.io/Workforce/team.jpg" alt="Students" class="w-full h-full object-cover">
+      </div>
+    </div>
+  </div>
+
+  <!-- Features Grid -->
+  <div class="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 text-white">
+    <!-- Card 1 -->
+    <div class="bg-indigo-900 p-6 text-center">
+      <div class="text-3xl mb-4">🎓</div>
+      <h3 class="text-xl font-bold mb-2">UPDATED PROGRAMS</h3>
+      <p class="text-sm">You can be confident that the materials encompassed within our curricula are current and reflective of contemporary standards.</p>
+    </div>
+    <!-- Card 2 -->
+    <div class="bg-indigo-700 p-6 text-center">
+      <div class="text-3xl mb-4">📄</div>
+      <h3 class="text-xl font-bold mb-2">E-RESOURCES</h3>
+      <p class="text-sm">You are exposed to a vast collection of resources which can help you in your academic journey.</p>
+    </div>
+    <!-- Card 3 -->
+    <div class="bg-cyan-600 p-6 text-center">
+      <div class="text-3xl mb-4">💎</div>
+      <h3 class="text-xl font-bold mb-2">SEASONED PROFESSORS</h3>
+      <p class="text-sm">Guided by professors with a wealth of knowledge and industry experience to learn from.</p>
+    </div>
+    <!-- Card 4 -->
+    <div class="bg-blue-500 p-6 text-center">
+      <div class="text-3xl mb-4">🎧</div>
+      <h3 class="text-xl font-bold mb-2">LIVE VIRTUAL STUDENT SUPPORT</h3>
+      <p class="text-sm">We are here for you whenever you need a helping hand.</p>
+    </div>
+  </div>
+</section>
 
 
  <section class="py-10 bg-white">
