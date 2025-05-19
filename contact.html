@@ -5,8 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Workforce Career Institute - Enhanced Homepage</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
-
   <style>
     .fade {
       transition: opacity 1s ease-in-out;
@@ -22,6 +20,8 @@
     }
     .nav-link {
       position: relative;
+      padding-right: 1rem;
+      padding-left: 1rem;
     }
     .nav-link::after {
       content: '';
@@ -57,24 +57,47 @@
     .dropdown-menu a:hover {
       background-color: #f1f1f1;
     }
+  .legal-image {
+   border: 4px solid #2DD4BF; 
+    border-radius: 12px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    max-width: 360px;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    cursor: pointer;
+  }
+
+  .zoomed {
+    transform: scale(2);
+    z-index: 50;
+    position: relative;
+  }
+  /* Section title with bottom border */
+    .section-title {
+      @apply text-4xl font-extrabold mb-8 text-blue-800 inline-block border-b-4 border-yellow-400 pb-2;
+    }
   </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body class="bg-gray-50 text-gray-800 font-sans">
 
-  <!-- Navigation -->
-  <header class="bg-blue-800 text-white shadow sticky top-0 z-50">
-    <div class="container mx-auto flex items-center justify-between py-4 px-1">
+  <!-- Header -->
+  <header class="bg-gray-800 text-white shadow sticky top-0 z-50 border-b-4 border-yellow-400">
+    <div class="container mx-auto flex items-center justify-between py-4 px-4">
       <div class="flex items-center space-x-3">
         <img src="https://echizen593.github.io/Workforce/LOGO2.png" alt="Logo" class="h-16 w-auto object-contain">
-        <h1 class="leading-tight">
+        <div>
           <span class="block text-2xl font-bold">WORKFORCE</span>
-          <span class="block text-lg font-semibold">CAREER INSTITUTE</span>
-        </h1>
+          <span class="block text-m font-light tracking-widest text-gray-300 w-full">CAREER INSTITUTE</span>
+        </div>
       </div>
-      <nav class="hidden lg:flex text-lg font-semibold tracking-wide divide-x divide-white relative">
-        <a href="index.html" class="px-4 hover:text-blue-200">HOME</a>
+
+      <!-- Navigation -->
+      <nav class="hidden lg:flex text-lg font-semibold tracking-wide space-x divide-x divide-gray-500">
+        <a href="index.html" class="nav-link text-white hover:text-gray-300">HOME</a>
         <div class="relative dropdown">
-          <a href="#" class="px-4 hover:text-blue-200 nav-link">ABOUT US</a>
+          <a href="#" class="px-4 hover:text-white nav-link">ABOUT US</a>
           <div class="dropdown-menu">
             <a href="profile.html">Profile</a>
             <a href="vision.html">Vision, Mission and Core Values</a>
@@ -85,9 +108,9 @@
             <a href="community.html">Community Extension Program</a>
           </div>
         </div>
-        <a href="academic.html" class="px-4 hover:text-blue-200">ACADEMIC</a>
+        <a href="academic.html" class="px-4 hover:text-white">ACADEMIC</a>
         <div class="relative dropdown">
-          <a href="#" class="px-4 hover:text-blue-200 nav-link">STUDENTS</a>
+          <a href="#" class="px-4 hover:text-white nav-link">STUDENTS</a>
           <div class="dropdown-menu">
             <a href="admission.html">Admission and Registration</a>
             <a href="student.html">Student Support</a>
@@ -97,19 +120,21 @@
             <a href="classroom.html">The Classroom</a>
           </div>
         </div>
-        <a href="contact.html" class="px-4 hover:text-blue-200">CONTACT</a>
+        <a href="contact.html" class="px-4 hover:text-white">CONTACT</a>
       </nav>
+
+      <!-- Action Buttons -->
       <div class="space-x-3">
-        <a href="#apply" class="bg-yellow-400 hover:bg-yellow-500 text-blue-900 font-semibold px-5 py-2 rounded-full text-sm shadow-sm">APPLY NOW</a>
-        <a href="#help" class="border border-white text-white hover:bg-white hover:text-blue-800 font-semibold px-5 py-2 rounded-full text-sm shadow-sm">GET HELP</a>
+        <a href="#apply" class="bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-semibold px-4 py-2 rounded-full text-sm shadow-sm">Enroll Now</a>
+        <a href="#help" class="border border-white text-white hover:bg-white hover:text-gray-900 font-semibold px-4 py-2 rounded-full text-sm shadow-sm">Get Help</a>
       </div>
     </div>
   </header>
 
   <!-- Visit Us and Contact Info Section -->
-  <section class="py-16 bg-blue-50">
+  <section class="py-16 bg-black-50">
     <div class="max-w-6xl mx-auto px-6">
-      <h2 class="text-4xl font-extrabold text-center text-blue-800 mb-10">Visit Us</h2>
+      <h2 class="text-4xl font-extrabold text-center text-blue-800 mb-10">VISIT US</h2>
 
       <!-- Map -->
       <div class="rounded-2xl overflow-hidden shadow-lg border border-blue-200 mb-10">
@@ -127,7 +152,7 @@
 
 <!-- Contact Info -->
 <div class="bg-white rounded-2xl shadow-xl p-10 text-center border border-blue-100 max-w-2xl mx-auto">
-  <h3 class="text-2xl font-bold text-blue-800 mb-6">Contact Us</h3>
+  <h3 class="text-2xl font-bold text-black-800 mb-6">CONTACT US</h3>
   <div class="space-y-6 text-lg text-gray-700">
     <!-- Institute Name -->
     <div class="flex items-center justify-center space-x-3">
@@ -158,10 +183,21 @@
 </div>
     </div>
   </section>
-  <!-- Footer -->
-  <footer class="bg-blue-800 text-white text-center p-4 mt-12">
-    <p>&copy; 2025 Workforce Career Institute. All rights reserved.</p>
-  </footer>
+ 
+  <footer class="bg-gray-800 text-white text-center py-6 mt-16 shadow-inner border-t-4 border-yellow-400">
+    <div class="container mx-auto">
+      <p class="text-sm">&copy; 2025 Workforce Career Institute. All rights reserved.</p>
+      <p class="text-xs mt-1 italic text-gray-400">Empowering Futures with Excellence and Innovation</p>
+    </div>
+   </footer>
+  
+  <script>
+  document.querySelectorAll('.legal-image').forEach(img => {
+    img.addEventListener('click', () => {
+      img.classList.toggle('zoomed');
+    });
+  });
+</script>
 
 </body>
 </html>
