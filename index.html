@@ -204,17 +204,16 @@
 
 
 
-
 <!-- ========= NEWS & FEATURES (ENHANCED) ========= -->
 <section class="pt-12 pb-20 bg-gray-100" id="news">
   <div class="container mx-auto px-4">
     <h2 class="text-4xl font-bold text-center text-blue-800 mb-16">News &amp; Features</h2>
 
     <!-- cards -->
-    <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
-      
-      <!-- Card Template -->
-      <article class="bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden flex flex-col group">
+    <div id="news-carousel" class="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
+      <!-- Article Cards - Keep adding more if needed -->
+      <!-- Card 1 -->
+      <article class="news-card bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden flex flex-col group">
         <img src="https://echizen593.github.io/Workforce/news2.jpg" alt="News 1" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300">
         <div class="p-6 flex flex-col flex-grow">
           <div class="flex items-center justify-between mb-2">
@@ -222,16 +221,12 @@
             <span class="text-gray-500 text-sm">March 27, 2025</span>
           </div>
           <h3 class="text-xl font-semibold text-blue-900 mb-3 group-hover:text-blue-700 transition-colors duration-200">1st Founding Anniversary OPEN HOUSE</h3>
-          <p class="text-gray-700 text-sm flex-grow">
-            You are invited to attend the 1st Founding Anniversary OPEN HOUSE of #workforcecareerinstitute on Tuesday, May 6, 2025 from 8 AM to 5 PM.
-            EXCLUSIVE SCHOLARSHIPS for attendees, information sessions, free career advising, and more!
-            Pre-register now: (036) 500-0526 / 0917-155-3325 or admissions@workforce-institute.com.
-          </p>
+          <p class="text-gray-700 text-sm flex-grow">You are invited to attend the 1st Founding Anniversary OPEN HOUSE of #workforcecareerinstitute...</p>
         </div>
       </article>
 
       <!-- Card 2 -->
-      <article class="bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden flex flex-col group">
+      <article class="news-card bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden flex flex-col group">
         <img src="https://echizen593.github.io/Workforce/news3.jpg" alt="News 2" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300">
         <div class="p-6 flex flex-col flex-grow">
           <div class="flex items-center justify-between mb-2">
@@ -239,16 +234,12 @@
             <span class="text-gray-500 text-sm">April 1, 2025</span>
           </div>
           <h3 class="text-xl font-semibold text-blue-900 mb-3 group-hover:text-blue-700 transition-colors duration-200">TESDA Scholarship: Bookkeeping NC III</h3>
-          <p class="text-gray-700 text-sm flex-grow">
-            BE A TESDA SCHOLAR NOW! Workforce Career Institute is accepting applicants for BOOKKEEPING NC III.
-            Requirements: HS graduate or equivalent, 18+ years old, basic math & communication skills.
-            Classes start April 14.
-          </p>
+          <p class="text-gray-700 text-sm flex-grow">BE A TESDA SCHOLAR NOW! Workforce Career Institute is accepting applicants for BOOKKEEPING NC III...</p>
         </div>
       </article>
 
       <!-- Card 3 -->
-      <article class="bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden flex flex-col group">
+      <article class="news-card bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden flex flex-col group">
         <img src="https://echizen593.github.io/Workforce/news1.jpg" alt="News 3" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300">
         <div class="p-6 flex flex-col flex-grow">
           <div class="flex items-center justify-between mb-2">
@@ -256,30 +247,62 @@
             <span class="text-gray-500 text-sm">March 1, 2025</span>
           </div>
           <h3 class="text-xl font-semibold text-blue-900 mb-3 group-hover:text-blue-700 transition-colors duration-200">Graduation Meeting Scheduled</h3>
-          <p class="text-gray-700 text-sm flex-grow">
-            The Graduation Meeting will be held on March 5, 2025 at 1 PM via Google Meet.
-            Graduates, please check your email for the meeting link.
-          </p>
+          <p class="text-gray-700 text-sm flex-grow">The Graduation Meeting will be held on March 5, 2025 at 1 PM via Google Meet...</p>
         </div>
       </article>
+    </div>
 
-        <!-- Card 4 -->
-      <article class="bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden flex flex-col group">
-        <img src="https://echizen593.github.io/Workforce/news3.jpg" alt="News 2" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300">
-        <div class="p-6 flex flex-col flex-grow">
-          <div class="flex items-center justify-between mb-2">
-            <span class="bg-green-100 text-green-800 text-xs font-medium px-3 py-1 rounded-full">Scholarship</span>
-            <span class="text-gray-500 text-sm">April 1, 2025</span>
-          </div>
-          <h3 class="text-xl font-semibold text-blue-900 mb-3 group-hover:text-blue-700 transition-colors duration-200">TESDA Scholarship: Bookkeeping NC III</h3>
-          <p class="text-gray-700 text-sm flex-grow">
-            BE A TESDA SCHOLAR NOW! Workforce Career Institute is accepting applicants for BOOKKEEPING NC III.
-            Requirements: HS graduate or equivalent, 18+ years old, basic math & communication skills.
-            Classes start April 14.
-          </p>
-        </div>
-      </article>
+    <!-- Nav buttons -->
+    <div class="flex justify-center mt-16 space-x-6">
+      <button id="prevBtn" aria-label="Previous" class="transform hover:scale-110 transition-transform bg-gray-700 text-white px-4 py-3 rounded-full shadow-md hover:shadow-lg">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+        </svg>
+      </button>
+      <button id="nextBtn" aria-label="Next" class="transform hover:scale-110 transition-transform bg-gray-700 text-white px-4 py-3 rounded-full shadow-md hover:shadow-lg">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+        </svg>
+      </button>
+    </div>
+  </div>
+</section>
 
+<!-- Carousel Functionality Script -->
+<script>
+  const cards = document.querySelectorAll('.news-card');
+  const nextBtn = document.getElementById('nextBtn');
+  const prevBtn = document.getElementById('prevBtn');
+  let currentIndex = 0;
+  const cardsPerPage = 3;
+
+  function updateCarousel() {
+    cards.forEach((card, index) => {
+      card.style.display = (index >= currentIndex && index < currentIndex + cardsPerPage) ? 'block' : 'none';
+    });
+
+    // Disable prev/next buttons when at start or end
+    prevBtn.disabled = currentIndex === 0;
+    nextBtn.disabled = currentIndex + cardsPerPage >= cards.length;
+  }
+
+  nextBtn.addEventListener('click', () => {
+    if (currentIndex + cardsPerPage < cards.length) {
+      currentIndex += cardsPerPage;
+      updateCarousel();
+    }
+  });
+
+  prevBtn.addEventListener('click', () => {
+    if (currentIndex - cardsPerPage >= 0) {
+      currentIndex -= cardsPerPage;
+      updateCarousel();
+    }
+  });
+
+  // Initialize on load
+  updateCarousel();
+</script>
 
     </div> <!-- /grid -->
 
