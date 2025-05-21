@@ -120,11 +120,17 @@
     STUDENT RESEARCH
     </h2>
 <section class="bg-white py-16 px-6 md:px-16 lg:px-24">
-  <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+  <div class="max-w-7xl mx-auto">
     
-    <!-- Left Column: Text + Images -->
-    <div>
-      <h2 class="text-4xl font-extrabold text-gray-800 mb-6 leading-tight">
+    <!-- Images Above Text -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10">
+      <img src="your-image-1.jpg" alt="Research Image 1" class="rounded-xl shadow-lg object-cover w-full h-56 hover:scale-105 transition-transform duration-300 ease-in-out">
+      <img src="your-image-2.jpg" alt="Research Image 2" class="rounded-xl shadow-lg object-cover w-full h-56 hover:scale-105 transition-transform duration-300 ease-in-out">
+    </div>
+
+    <!-- Text Content -->
+    <div class="mb-10">
+      <h2 class="text-4xl font-extrabold text-gray-800 mb-6">
         Research Opportunities for Transformative Learning
       </h2>
       <p class="text-gray-700 text-lg leading-relaxed text-justify">
@@ -140,65 +146,59 @@
         exhibiting exceptional potential for enhanced academic development, as well as for the exploration of 
         prospective life trajectories.
       </p>
-      <!-- Images -->
-      <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
-        <img src="your-image-1.jpg" alt="Research 1" class="rounded-xl shadow-lg hover:scale-105 transition-transform duration-300 ease-in-out object-cover w-full h-48">
-        <img src="your-image-2.jpg" alt="Research 2" class="rounded-xl shadow-lg hover:scale-105 transition-transform duration-300 ease-in-out object-cover w-full h-48">
-      </div>
     </div>
 
-    <!-- Right Column: Wider Table -->
-    <div class="w-full">
-      <h3 class="text-3xl font-bold text-gray-800 mb-6">Student Research</h3>
-      <div class="bg-white border border-gray-200 rounded-xl shadow-xl overflow-auto">
-        <table class="min-w-[900px] w-full text-sm text-left text-gray-700">
-          <thead class="bg-gray-100 text-gray-600 uppercase text-xs border-b">
-            <tr>
-              <th class="px-6 py-4 w-1/2">Title</th>
-              <th class="px-6 py-4 w-1/6">Author</th>
-              <th class="px-6 py-4 w-1/4">Course</th>
-              <th class="px-6 py-4 w-1/12">Year</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr class="border-b hover:bg-gray-50">
-              <td class="px-6 py-4">
-                Unveiling the Impact: Transformational Leadership Styles of School Principals and Organizational Trust Toward Enhanced School Effectiveness
-              </td>
-              <td class="px-6 py-4">Rowena A. Andrade</td>
-              <td class="px-6 py-4">MAED Major in School Administration and Supervision</td>
-              <td class="px-6 py-4">2025</td>
-            </tr>
-            <tr class="border-b hover:bg-gray-50">
-              <td class="px-6 py-4">
-                Sharpening Young Minds: A Quantitative Exploration of Critical Thinking Skills Among Grade 9 Students as the Basis for a Classroom-Based Intervention Plan
-              </td>
-              <td class="px-6 py-4">Joy De Juan</td>
-              <td class="px-6 py-4">MAED English as Second Language</td>
-              <td class="px-6 py-4">2025</td>
-            </tr>
-            <tr class="border-b hover:bg-gray-50">
-              <td class="px-6 py-4">
-                Evaluation of Grade 4 English Textbook Used at Lumbocan Elementary School: A Content Analysis
-              </td>
-              <td class="px-6 py-4">Jomailah Hadjiansary</td>
-              <td class="px-6 py-4">MAED English as Second Language</td>
-              <td class="px-6 py-4">2024</td>
-            </tr>
-            <tr class="hover:bg-gray-50">
-              <td class="px-6 py-4">
-                Effects of Effective Recruitment and Selection Practices in Improving Organizational Performance of a Public Sector Organization: A Case Study
-              </td>
-              <td class="px-6 py-4">Edwin G. Huervana</td>
-              <td class="px-6 py-4">Master of Public Administration</td>
-              <td class="px-6 py-4">2024</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+    <!-- Student Research Table -->
+    <div class="bg-gray-50 border border-gray-200 rounded-xl shadow-xl overflow-x-auto">
+      <h3 class="text-3xl font-bold text-gray-800 px-6 pt-6 pb-2">Student Research</h3>
+      <table class="min-w-[900px] w-full text-sm text-left text-gray-700 mt-2">
+        <thead class="bg-gray-100 text-gray-600 uppercase text-xs border-b">
+          <tr>
+            <th class="px-6 py-4 w-1/2">Title</th>
+            <th class="px-6 py-4 w-1/6">Author</th>
+            <th class="px-6 py-4 w-1/4">Course</th>
+            <th class="px-6 py-4 w-1/12">Year</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="border-b hover:bg-gray-50">
+            <td class="px-6 py-4">
+              Unveiling the Impact: Transformational Leadership Styles of School Principals and Organizational Trust Toward Enhanced School Effectiveness
+            </td>
+            <td class="px-6 py-4">Rowena A. Andrade</td>
+            <td class="px-6 py-4">MAED Major in School Administration and Supervision</td>
+            <td class="px-6 py-4">2025</td>
+          </tr>
+          <tr class="border-b hover:bg-gray-50">
+            <td class="px-6 py-4">
+              Sharpening Young Minds: A Quantitative Exploration of Critical Thinking Skills Among Grade 9 Students as the Basis for a Classroom-Based Intervention Plan
+            </td>
+            <td class="px-6 py-4">Joy De Juan</td>
+            <td class="px-6 py-4">MAED English as Second Language</td>
+            <td class="px-6 py-4">2025</td>
+          </tr>
+          <tr class="border-b hover:bg-gray-50">
+            <td class="px-6 py-4">
+              Evaluation of Grade 4 English Textbook Used at Lumbocan Elementary School: A Content Analysis
+            </td>
+            <td class="px-6 py-4">Jomailah Hadjiansary</td>
+            <td class="px-6 py-4">MAED English as Second Language</td>
+            <td class="px-6 py-4">2024</td>
+          </tr>
+          <tr class="hover:bg-gray-50">
+            <td class="px-6 py-4">
+              Effects of Effective Recruitment and Selection Practices in Improving Organizational Performance of a Public Sector Organization: A Case Study
+            </td>
+            <td class="px-6 py-4">Edwin G. Huervana</td>
+            <td class="px-6 py-4">Master of Public Administration</td>
+            <td class="px-6 py-4">2024</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
 </section>
+
 
 
      <footer class="bg-gray-800 text-white text-center py-6 mt-16 shadow-inner border-t-4 border-yellow-400">
