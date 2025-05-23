@@ -88,6 +88,9 @@
       @apply text-4xl font-extrabold mb-8 text-blue-800 inline-block border-b-4 border-yellow-400 pb-2;
     }
 
+      toggle.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+  });
     </style>
 
   </style>
@@ -142,6 +145,7 @@
       </div>
     </div>
   </header>
+
   <!-- Mobile Menu Button -->
 <div class="lg:hidden">
   <button id="menu-toggle" class="text-white focus:outline-none">
@@ -153,6 +157,42 @@
   </button>
 </div>
 
+  <nav id="mobile-menu" class="lg:hidden hidden flex-col bg-gray-700 text-white text-sm mt-4 space-y-2 p-4 rounded-lg shadow-lg">
+  <a href="index.html" class="block hover:text-yellow-300">Home</a>
+  <div>
+    <p class="font-semibold">About Us</p>
+    <div class="ml-4 space-y-1">
+      <a href="profile.html">Profile</a>
+      <a href="vision.html">Vision, Mission and Core Values</a>
+      <a href="legalities.html">Legalities</a>
+      <a href="board.html">Board of Directors</a>
+      <a href="team.html">The Working Team</a>
+      <a href="teaching.html">The Teaching Force</a>
+      <a href="community.html">Community Extension Program</a>
+    </div>
+  </div>
+  <a href="academic.html" class="block hover:text-yellow-300">Academic</a>
+  <div>
+    <p class="font-semibold">Students</p>
+    <div class="ml-4 space-y-1">
+      <a href="admission.html">Admission and Registration</a>
+      <a href="student.html">Student Support</a>
+      <a href="accounts.html">Accounts</a>
+      <a href="research.html">Student Research</a>
+      <a href="career.html">Career Center</a>
+      <a href="classroom.html">The Classroom</a>
+    </div>
+  </div>
+  <a href="contact.html" class="block hover:text-yellow-300">Contact</a>
+</nav>
+
+  const toggle = document.getElementById('menu-toggle');
+  const menu = document.getElementById('mobile-menu');
+
+  toggle.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+  });
+  
    <!-- Homepage with Enhanced Image Carousel -->
 <section id="home" class="pt-12 pb-6 bg-white">
     <div class="container mx-auto text-center px-4">
