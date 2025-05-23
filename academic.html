@@ -60,33 +60,82 @@
 <body class="bg-gray-200 text-gray-800 font-sans">
 
   
-  <!-- Header -->
-<header class="bg-gray-800 text-white shadow sticky top-0 z-50 border-b-4 border-yellow-400">
-  <div class="container mx-auto flex flex-wrap items-center justify-between py-4 px-4">
-    <!-- Logo Section -->
-    <div class="flex items-center space-x-3">
-      <img src="https://echizen593.github.io/Workforce/LOGO2.png" alt="Logo" class="h-16 w-auto object-contain">
-      <div>
-        <span class="block text-2xl font-bold">WORKFORCE</span>
-        <span class="block text-sm font-light tracking-widest text-gray-300">CAREER INSTITUTE</span>
+ <!-- Header -->
+  <header class="bg-gray-800 text-white shadow sticky top-0 z-50 border-b-4 border-yellow-400">
+    <div class="container mx-auto flex flex-wrap items-center justify-between py-4 px-4">
+
+      <!-- Logo Section -->
+      <div class="flex items-center space-x-3">
+        <img src="https://echizen593.github.io/Workforce/LOGO2.png" alt="Logo" class="h-16 w-auto object-contain" />
+        <div>
+          <span class="block text-2xl font-bold">WORKFORCE</span>
+          <span class="block text-sm font-light tracking-widest text-gray-300">CAREER INSTITUTE</span>
+        </div>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <div class="lg:hidden">
+        <button id="menu-toggle" class="text-white focus:outline-none" aria-label="Toggle menu">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+               xmlns="http://www.w3.org/2000/svg" >
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Desktop Nav with vertical dividers and tighter spacing -->
+      <nav class="hidden lg:flex text-lg font-semibold tracking-wide divide-x divide-gray-500">
+        <div class="px-2">
+          <a href="index.html" class="nav-link text-white hover:text-gray-300">HOME</a>
+        </div>
+
+        <div class="relative dropdown px-2">
+          <a href="#" class="nav-link hover:text-white">ABOUT US</a>
+          <div class="dropdown-menu">
+            <a href="profile.html">Profile</a>
+            <a href="vision.html">Vision, Mission and Core Values</a>
+            <a href="legalities.html">Legalities</a>
+            <a href="board.html">Board of Directors</a>
+            <a href="team.html">The Working Team</a>
+            <a href="teaching.html">The Teaching Force</a>
+            <a href="community.html">Community Extension Program</a>
+          </div>
+        </div>
+
+        <div class="px-2">
+          <a href="academic.html" class="nav-link hover:text-white">ACADEMIC</a>
+        </div>
+
+        <div class="relative dropdown px-2">
+          <a href="#" class="nav-link hover:text-white">STUDENTS</a>
+          <div class="dropdown-menu">
+            <a href="admission.html">Admission and Registration</a>
+            <a href="student.html">Student Support</a>
+            <a href="accounts.html">Accounts</a>
+            <a href="research.html">Student Research</a>
+            <a href="career.html">Career Center</a>
+            <a href="classroom.html">The Classroom</a>
+          </div>
+        </div>
+
+        <div class="px-2">
+          <a href="contact.html" class="nav-link hover:text-white">CONTACT</a>
+        </div>
+      </nav>
+
+      <!-- Action Buttons -->
+      <div class="hidden lg:flex space-x-3">
+        <a href="admission.html" class="bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-semibold px-4 py-2 rounded-full text-sm shadow-sm">Enroll Now</a>
+        <a href="contact.html" class="border border-white text-white hover:bg-white hover:text-gray-900 font-semibold px-4 py-2 rounded-full text-sm shadow-sm">Get Help</a>
       </div>
     </div>
 
-    <!-- Mobile Menu Button -->
-    <div class="lg:hidden">
-      <button id="menu-toggle" class="text-white focus:outline-none">
-        <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-        </svg>
-      </button>
-    </div>
-
-    <!-- Desktop Nav -->
-    <nav class="hidden lg:flex text-lg font-semibold tracking-wide space-x-6">
-      <a href="index.html" class="nav-link text-white hover:text-gray-300">HOME</a>
-      <div class="relative dropdown">
-        <a href="#" class="nav-link hover:text-white">ABOUT US</a>
-        <div class="dropdown-menu">
+    <!-- Mobile Dropdown Menu -->
+    <nav id="mobile-menu" class="lg:hidden hidden flex-col bg-gray-700 text-white text-base space-y-2 px-4 py-4">
+      <a href="index.html" class="block hover:text-yellow-300">Home</a>
+      <details class="group">
+        <summary class="font-semibold cursor-pointer">About Us</summary>
+        <div class="ml-4 space-y-1">
           <a href="profile.html">Profile</a>
           <a href="vision.html">Vision, Mission and Core Values</a>
           <a href="legalities.html">Legalities</a>
@@ -95,11 +144,11 @@
           <a href="teaching.html">The Teaching Force</a>
           <a href="community.html">Community Extension Program</a>
         </div>
-      </div>
-      <a href="academic.html" class="nav-link hover:text-white">ACADEMIC</a>
-      <div class="relative dropdown">
-        <a href="#" class="nav-link hover:text-white">STUDENTS</a>
-        <div class="dropdown-menu">
+      </details>
+      <a href="academic.html" class="block hover:text-yellow-300">Academic</a>
+      <details class="group">
+        <summary class="font-semibold cursor-pointer">Students</summary>
+        <div class="ml-4 space-y-1">
           <a href="admission.html">Admission and Registration</a>
           <a href="student.html">Student Support</a>
           <a href="accounts.html">Accounts</a>
@@ -107,51 +156,23 @@
           <a href="career.html">Career Center</a>
           <a href="classroom.html">The Classroom</a>
         </div>
+      </details>
+      <a href="contact.html" class="block hover:text-yellow-300">Contact</a>
+      <div class="mt-2 space-y-2">
+        <a href="admission.html" class="block text-center bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-semibold px-4 py-2 rounded-full text-sm shadow-sm">Enroll Now</a>
+        <a href="contact.html" class="block text-center border border-white text-white hover:bg-white hover:text-gray-900 font-semibold px-4 py-2 rounded-full text-sm shadow-sm">Get Help</a>
       </div>
-      <a href="contact.html" class="nav-link hover:text-white">CONTACT</a>
     </nav>
+  </header>
 
-    <!-- Action Buttons -->
-    <div class="hidden lg:flex space-x-3">
-      <a href="admission.html" class="bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-semibold px-4 py-2 rounded-full text-sm shadow-sm">Enroll Now</a>
-      <a href="contact.html" class="border border-white text-white hover:bg-white hover:text-gray-900 font-semibold px-4 py-2 rounded-full text-sm shadow-sm">Get Help</a>
-    </div>
-  </div>
+  <script>
+    document.getElementById('menu-toggle').addEventListener('click', function () {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('hidden');
+    });
+  </script>
 
-  <!-- Mobile Dropdown Menu -->
-  <nav id="mobile-menu" class="lg:hidden hidden flex-col bg-gray-700 text-white text-base space-y-2 px-4 py-4">
-    <a href="index.html" class="block hover:text-yellow-300">Home</a>
-    <details class="group">
-      <summary class="font-semibold cursor-pointer">About Us</summary>
-      <div class="ml-4 space-y-1">
-        <a href="profile.html">Profile</a>
-        <a href="vision.html">Vision, Mission and Core Values</a>
-        <a href="legalities.html">Legalities</a>
-        <a href="board.html">Board of Directors</a>
-        <a href="team.html">The Working Team</a>
-        <a href="teaching.html">The Teaching Force</a>
-        <a href="community.html">Community Extension Program</a>
-      </div>
-    </details>
-    <a href="academic.html" class="block hover:text-yellow-300">Academic</a>
-    <details class="group">
-      <summary class="font-semibold cursor-pointer">Students</summary>
-      <div class="ml-4 space-y-1">
-        <a href="admission.html">Admission and Registration</a>
-        <a href="student.html">Student Support</a>
-        <a href="accounts.html">Accounts</a>
-        <a href="research.html">Student Research</a>
-        <a href="career.html">Career Center</a>
-        <a href="classroom.html">The Classroom</a>
-      </div>
-    </details>
-    <a href="contact.html" class="block hover:text-yellow-300">Contact</a>
-    <div class="mt-2 space-y-2">
-      <a href="admission.html" class="block text-center bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-semibold px-4 py-2 rounded-full text-sm shadow-sm">Enroll Now</a>
-      <a href="contact.html" class="block text-center border border-white text-white hover:bg-white hover:text-gray-900 font-semibold px-4 py-2 rounded-full text-sm shadow-sm">Get Help</a>
-    </div>
-  </nav>
-</header>
+
 
 
   
