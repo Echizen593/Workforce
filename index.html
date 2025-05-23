@@ -186,12 +186,7 @@
   <a href="contact.html" class="block hover:text-yellow-300">Contact</a>
 </nav>
 
-  const toggle = document.getElementById('menu-toggle');
-  const menu = document.getElementById('mobile-menu');
 
-  toggle.addEventListener('click', () => {
-    menu.classList.toggle('hidden');
-  });
   
    <!-- Homepage with Enhanced Image Carousel -->
 <section id="home" class="pt-12 pb-6 bg-white">
@@ -615,7 +610,14 @@ Good luck to all examinees!!! #workforcecareerinstitute #sandigancolleges #Compr
     </div>
   </footer>
 
-     
+     <script>
+  const toggle = document.getElementById('menu-toggle');
+  const menu = document.getElementById('mobile-menu');
+
+  toggle.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+  });
+</script>
 
 </body>
 </html>
